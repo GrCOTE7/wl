@@ -158,7 +158,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: #fff; }
+  background: cornsilk; }
 
 * {
   box-sizing: border-box; }
@@ -190,12 +190,14 @@ body {
 .clr {
   content: "test"; }
 
-/* WP parts */
+.container {
+  width: 97%;
+  margin: 0 auto; }
+
 h1 {
-  text-align: center;
   width: 95%;
   margin: 0 auto;
-  font-size: 3em;
+  font-size: 2em;
   color: blue; }
 
 /*# sourceMappingURL=style.css.map */

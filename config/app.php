@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'url' => 'http://wl',
+    'url' => 'http://octobermovies.dev',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'key' => 'TBKib81S27Itw0kptpZh1MQAeZvWPz47',
+    'key' => 'LMt9qXpiQ2OGBlpGTHizt8NKmnyNzxZ8',
 
     'cipher' => 'AES-256-CBC',
 

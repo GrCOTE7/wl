@@ -7,7 +7,7 @@ html{
 
 body{
     -webkit-font-smoothing: antialiased;
-    background: #fff;
+    background: cornsilk;
 }
 
 *{
@@ -43,7 +43,10 @@ body{
 .clr{clear:both;}
 .clr{content:"test";}
 
-
+.container{
+  width: 97%;
+  margin: 0 auto;
+}
 
 
 
