@@ -1,0 +1,32 @@
+1.2.0:
+  - LTS compatibility
+  - Commands are renamed to ***:translated
+  - No overriding of default commands anymore
+1.1.2: Scan more folders for news translation strings
+1.1.1: OctoberCMS stable release
+1.1.0: Ready for OctoberCMS release
+1.0.17: Plugin stub updated to reflect current October version
+1.0.16: Fix the language folders lookup. Now checks only two or three letters folder that are writable.
+1.0.15: Checks for `backend.manage_preferences` to display the settings menu
+1.0.14:
+ - Portuguese default translation file
+ - Added the `use Vendor\Plugin\Models\Model` statemenet to the controller stub
+ - Minor fixes and standardization in default translations files
+1.0.13: Scans report widget
+1.0.12: Fix stub on case-sensitive file system
+1.0.11: Fix default settings options to true
+1.0.10: Fix typos in sources comment
+1.0.9: Removed unnecessary trans call in component details stub
+1.0.8: plugin:translate command now also scans models folder
+1.0.7:
+ - Improved french translation
+ - Fix segfault with preg_replace regexp
+1.0.6: Added a disclaimer comment in overriden command
+1.0.5: Updated documentation for marketplace
+1.0.4: Improved settings description
+1.0.3:
+  - Fix controller stub
+  - New scaffold command for widget, create:widget
+1.0.2: Fix delete_confirm default message
+1.0.1:
+  - First version of ScaffoldTranslation
