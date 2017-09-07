@@ -68,6 +68,7 @@ html {
 
 /* Copy & Lists */
 p {
+  text-align: justify;
   line-height: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 0;
@@ -111,14 +112,14 @@ h6 {
   font-weight: 700; }
 
 h1 {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 4.5rem;
-  margin-top: 3rem; }
+  margin-top: 1rem; }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 3rem;
-  margin-top: 3rem; }
+  margin-top: 1rem; }
 
 h3 {
   font-size: 1.414rem; }
@@ -163,7 +164,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: #fff;
+  background: cornsilk;
   color: #566b78; }
 
 .container {
@@ -175,7 +176,7 @@ body {
   box-sizing: border-box; }
 
 a {
-  color: #e81c4f; }
+  color: tomato; }
 
 /* =======================================================================
 ## ++ Cleafix
@@ -214,15 +215,29 @@ a {
     font-weight: 700;
     float: left; }
 
+.main-nav {
+  float: right; }
+  .main-nav li {
+    float: left; }
+  .main-nav a {
+    display: inline-block;
+    padding: 0 7px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700; }
+    .main-nav a:hover {
+      color: #fff; }
+  .main-nav li.active a {
+    text-decoration: overline underline;
+    color: red; }
+
 h1 {
-  width: 95%;
-  margin: 0 auto;
-  font-size: 2em;
-  color: blue; }
+  font-size: 1.7em; }
 
 .main-footer {
   background: #efefef;
-  padding: 20px 0;
+  padding: 15px 0;
   margin-top: 40px; }
   .main-footer h3 {
     margin: 0; }

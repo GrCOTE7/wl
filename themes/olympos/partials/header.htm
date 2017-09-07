@@ -1,12 +1,14 @@
 ==
 <header class="main-header">
     <div class="container clearfix">
-        <h1 class="logo">October Movies</h1>
+        <h1 class="logo">October Films</h1>
 
         <nav class="main-nav">
             <ul>
-                <li class="{% if this.page.id == 'homepage' %} active {% endif %}"><a href="{{ 'homepage'|page }}">Home</a></li>
-                <li class="{% if this.page.id == 'films' %} active {% endif %}"><a href="{{ 'films'|page }}">Films</a></li>
+                <li class="{% if this.page.id == 'homepage' %} active {% endif %}"><a href="{{ 'homepage'|page }}">Accueil</a>
+                </li>
+                <li class="{% if this.page.id == 'films' %} active {% endif %}"><a href="{{ 'films'|page }}">Films</a>
+                </li>
             </ul>
         </nav>
     </div>
