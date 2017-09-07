@@ -21,3 +21,6 @@ nbproject
 
 /node_modules
 _assets_
+
+.phpintel/
+.phpintel/index

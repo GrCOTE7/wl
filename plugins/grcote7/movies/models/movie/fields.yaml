@@ -23,3 +23,15 @@ fields:
             field: name
             type: slug
         type: text
+    poster:
+        label: 'Film poster'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -25,4 +25,10 @@ class Movie extends Model {
    * @var string The database table used by the model.
    */
   public $table = 'grcote7_movies_films';
+
+  /* Relations */
+
+  public $attachOne = [
+    'poster' => 'System\Models\File'
+  ];
 }
