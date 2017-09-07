@@ -47,3 +47,10 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    genres:
+        label: Genres
+        oc.commentPosition: ''
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation

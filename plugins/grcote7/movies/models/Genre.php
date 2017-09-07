@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Movie extends Model {
+class Genre extends Model {
 
   use \October\Rain\Database\Traits\Validation;
 
@@ -24,27 +24,16 @@ class Movie extends Model {
   /**
    * @var string The database table used by the model.
    */
-  public $table = 'grcote7_movies_films';
-
-  /* Relations */
+  public $table = 'grcote7_movies_genres';
 
   public $belongsToMany = [
-    'genres' => [
+    'movies' => [
 
-      'Grcote7\Movies\Models\Genre',
+      'Grcote7\Movies\Models\Movie',
       'table' => 'grcote7_movies_films_genres',
-      'order' => 'genre_title'
-
+      'order' => 'name'
 
     ]
   ];
 
-  public $attachOne = [
-    'poster' => 'System\Models\File'
-  ];
-
-  public $attachMany = [
-    'movie_gallery' => 'System\Models\File'
-  ];
-  
 }

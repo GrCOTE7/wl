@@ -1,0 +1,5 @@
+columns:
+    genre_title:
+        label: title
+        type: text
+        sortable: true

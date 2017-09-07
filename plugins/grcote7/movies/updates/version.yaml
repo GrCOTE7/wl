@@ -12,3 +12,9 @@
 1.0.5:
     - 'Updated table grcote7_movies_films'
     - builder_table_update_grcote7_movies_films_3.php
+1.0.6:
+    - 'Created table grcote7_movies_genres'
+    - builder_table_create_grcote7_movies_genres.php
+1.0.7:
+    - 'Created table grcote7_movies_films_genres'
+    - builder_table_create_grcote7_movies_films_genres.php

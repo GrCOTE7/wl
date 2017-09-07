@@ -1,0 +1,11 @@
+title: Genres
+modelClass: Grcote7\Movies\Models\Genre
+list: $/grcote7/movies/models/genre/columns.yaml
+recordUrl: 'grcote7/movies/genres/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

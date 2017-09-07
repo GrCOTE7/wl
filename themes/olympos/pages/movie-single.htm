@@ -19,7 +19,17 @@ notFoundMessage = "Record not found"
 <p><a href="/films"><-- Retour</a></p>
 
 {% if record %}
-<h2>{{ record.name}}</h2>
+
+{% if record.genres|length %}
+<h3>Genres</h3>
+{% for genre in record.genres %}
+<a href="/genres/{{ genre.slug }}">{{ genre.genre_title }}</a><br>
+{% endfor %}
+{% endif %}
+
+
+<h1>{{ record.name}}</h1>
+
 
 <img src="{{ record.poster.thumb(200,auto) }}"/>
 

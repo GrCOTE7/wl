@@ -9,3 +9,8 @@ navigation:
         label: Films
         url: grcote7/movies/films
         icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: grcote7/movies/genres
+                icon: icon-tag
