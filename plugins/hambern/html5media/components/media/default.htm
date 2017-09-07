@@ -1,0 +1,18 @@
+{% set property = __SELF__.properties %}
+<{{ property.mediaType }} id="{{ __SELF__.id }}"
+{% if property.source is not empty %} src="{{ property.source }}"{% endif %}
+{% if property.class is not empty %} class="{{ property.class }}"{% endif %}
+{% if property.style is not empty %} style="{{ property.style }}"{% endif %}
+{% if property.height is not empty %} height="{{ property.height }}"{% endif %}
+{% if property.width is not empty %} width="{{ property.width }}"{% endif %}
+{% if property.mediaType == 'video' %} poster="{{ property.poster }}"{% endif %}
+{% if property.preload %} preload{% endif %}
+{% if property.controls %} controls{% endif %}
+{% if property.autoplay %} autoplay{% endif %}
+{% if property.hidden %} hidden{% endif %}>
+{% if property.sources.count %}
+  {% for source in sources %}
+    <source src="{{ source.path }}"></source>
+  {% endfor %}
+{% endif %}
+</{{ property.mediaType }}>

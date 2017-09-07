@@ -1,0 +1,41 @@
+<?php return [
+    'plugin' => [
+        'name' => 'Html5media',
+        'description' => 'Add a Html5media element to your site',
+    ],
+    'components' => [
+        'media' => [
+            'name' => 'Media',
+            'description' => 'Add a Html5media',
+        ],
+    ],
+    'labels' => [
+        'preload' => 'Preload',
+        'controls' => 'Controls',
+        'mediaType' => 'Media type',
+        'poster' => 'Poster',
+        'source' => 'Source',
+        'autoplay' => 'Autoplay',
+        'loop' => 'Loop',
+        'attributes' => 'Attributes',
+        'class' => 'Class',
+        'style' => 'Style',
+        'width' => 'Width',
+        'height' => 'Height',
+        'hidden' => 'Hidden',
+    ],
+    'descriptions' => [
+        'preload' => 'Choose weither to implement preload or not',
+        'controls' => 'Choose weither to implement controls or not',
+        'autoplay' => 'Choose weither to implement autoplay or not',
+        'loop' => 'Choose weither to implement loop or not',
+        'hidden' => 'Choose weither to hide the element or not',
+        'mediaType' => 'Pick a media type',
+        'poster' => 'Enter a poster image path (optional)',
+        'source' => 'Enter your source path',
+        'class' => 'Set class attribute',
+        'style' => 'Set style attribute',
+        'width' => 'Set width attribute',
+        'height' => 'Set height attribute',
+    ],
+];

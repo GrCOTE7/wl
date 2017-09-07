@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  jeu. 07 sep. 2017 à 03:24
+-- Généré le :  jeu. 07 sep. 2017 à 03:34
 -- Version du serveur :  5.7.18
 -- Version de PHP :  7.1.7
 
@@ -624,15 +624,15 @@ CREATE TABLE `rainlab_forum_channels` (
 --
 
 INSERT INTO `rainlab_forum_channels` (`id`, `parent_id`, `title`, `slug`, `description`, `nest_left`, `nest_right`, `nest_depth`, `count_topics`, `count_posts`, `created_at`, `updated_at`, `is_hidden`, `is_moderated`, `embed_code`) VALUES
-(1, NULL, 'Channel Orange', 'channel-orange', 'A root level forum channel', 1, 12, 0, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(2, 1, 'Autumn Leaves', 'autumn-leaves', 'Disccusion about the season of falling leaves.', 2, 9, 1, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(3, 2, 'September', 'september', 'The start of the fall season.', 3, 4, 2, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(4, 2, 'October', 'october', 'The middle of the fall season.', 5, 6, 2, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(5, 2, 'November', 'november', 'The end of the fall season.', 7, 8, 2, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(6, 1, 'Summer Breeze', 'summer-breeze', 'Disccusion about the wind at the ocean.', 10, 11, 1, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(7, NULL, 'Channel Green', 'channel-green', 'A root level forum channel', 13, 18, 0, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(8, 7, 'Winter Snow', 'winter-snow', 'Disccusion about the frosty snow flakes.', 14, 15, 1, 0, 0, '2017-07-26 10:47:45', '2017-07-26 10:47:45', 0, 0, NULL),
-(9, 7, 'Spring Trees', 'spring-trees', 'Disccusion about the blooming gardens.', 16, 17, 1, 1, 1, '2017-07-26 10:47:45', '2017-07-26 10:49:09', 0, 0, NULL);
+(1, NULL, 'Channel Orange', 'channel-orange', 'A root level forum channel', 1, 12, 0, 0, 0, '2017-09-07 01:33:15', '2017-09-07 01:33:16', 0, 0, NULL),
+(2, 1, 'Autumn Leaves', 'autumn-leaves', 'Disccusion about the season of falling leaves.', 2, 9, 1, 0, 0, '2017-09-07 01:33:15', '2017-09-07 01:33:15', 0, 0, NULL),
+(3, 2, 'September', 'september', 'The start of the fall season.', 3, 4, 2, 0, 0, '2017-09-07 01:33:15', '2017-09-07 01:33:15', 0, 0, NULL),
+(4, 2, 'October', 'october', 'The middle of the fall season.', 5, 6, 2, 0, 0, '2017-09-07 01:33:15', '2017-09-07 01:33:15', 0, 0, NULL),
+(5, 2, 'November', 'november', 'The end of the fall season.', 7, 8, 2, 0, 0, '2017-09-07 01:33:15', '2017-09-07 01:33:16', 0, 0, NULL),
+(6, 1, 'Summer Breeze', 'summer-breeze', 'Disccusion about the wind at the ocean.', 10, 11, 1, 0, 0, '2017-09-07 01:33:16', '2017-09-07 01:33:16', 0, 0, NULL),
+(7, NULL, 'Channel Green', 'channel-green', 'A root level forum channel', 13, 18, 0, 0, 0, '2017-09-07 01:33:16', '2017-09-07 01:33:16', 0, 0, NULL),
+(8, 7, 'Winter Snow', 'winter-snow', 'Disccusion about the frosty snow flakes.', 14, 15, 1, 0, 0, '2017-09-07 01:33:16', '2017-09-07 01:33:16', 0, 0, NULL),
+(9, 7, 'Spring Trees', 'spring-trees', 'Disccusion about the blooming gardens.', 16, 17, 1, 0, 0, '2017-09-07 01:33:16', '2017-09-07 01:33:16', 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -654,13 +654,6 @@ CREATE TABLE `rainlab_forum_members` (
   `is_banned` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Déchargement des données de la table `rainlab_forum_members`
---
-
-INSERT INTO `rainlab_forum_members` (`id`, `user_id`, `username`, `slug`, `count_posts`, `count_topics`, `last_active_at`, `created_at`, `updated_at`, `is_moderator`, `is_banned`) VALUES
-(1, 1, 'GrCOTE71', 'grcote71', 1, 1, '2017-07-26 12:49:09', '2017-07-26 10:48:51', '2017-07-26 10:49:09', 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -679,13 +672,6 @@ CREATE TABLE `rainlab_forum_posts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `rainlab_forum_posts`
---
-
-INSERT INTO `rainlab_forum_posts` (`id`, `subject`, `content`, `content_html`, `topic_id`, `member_id`, `edit_user_id`, `delete_user_id`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Ok', '<p>Ok</p>', 1, 1, NULL, NULL, '2017-07-26 10:49:09', '2017-07-26 10:49:09');
 
 -- --------------------------------------------------------
 
@@ -712,13 +698,6 @@ CREATE TABLE `rainlab_forum_topics` (
   `embed_code` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Déchargement des données de la table `rainlab_forum_topics`
---
-
-INSERT INTO `rainlab_forum_topics` (`id`, `subject`, `slug`, `channel_id`, `start_member_id`, `last_post_id`, `last_post_member_id`, `last_post_at`, `is_private`, `is_sticky`, `is_locked`, `count_posts`, `count_views`, `created_at`, `updated_at`, `embed_code`) VALUES
-(1, 'Test', 'test', 9, 1, 1, 1, '2017-07-26 12:49:09', 0, 0, 0, 1, 6, '2017-07-26 10:49:09', '2017-07-26 10:49:09', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -731,13 +710,6 @@ CREATE TABLE `rainlab_forum_topic_followers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `rainlab_forum_topic_followers`
---
-
-INSERT INTO `rainlab_forum_topic_followers` (`topic_id`, `member_id`, `created_at`, `updated_at`) VALUES
-(1, 1, '2017-07-26 10:49:09', '2017-07-26 10:49:09');
 
 -- --------------------------------------------------------
 
@@ -1642,14 +1614,6 @@ CREATE TABLE `system_event_logs` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Déchargement des données de la table `system_event_logs`
---
-
-INSERT INTO `system_event_logs` (`id`, `level`, `message`, `details`, `created_at`, `updated_at`) VALUES
-(1, 'error', 'PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column \'slug\' in \'field list\' in C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:411\nStack trace:\n#0 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): PDO->prepare(\'update `grcote7...\')\n#1 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(659): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}(Object(October\\Rain\\Database\\Connections\\MySqlConnection), \'update `grcote7...\', Array)\n#2 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(622): Illuminate\\Database\\Connection->runQueryCallback(\'update `grcote7...\', Array, Object(Closure))\n#3 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->run(\'update `grcote7...\', Array, Object(Closure))\n#4 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->affectingStatement(\'update `grcote7...\', Array)\n#5 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1858): Illuminate\\Database\\Connection->update(\'update `grcote7...\', Array)\n#6 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\QueryBuilder.php(233): Illuminate\\Database\\Query\\Builder->update(Array)\n#7 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(384): October\\Rain\\Database\\QueryBuilder->update(Array)\n#8 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1526): Illuminate\\Database\\Eloquent\\Builder->update(Array)\n#9 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1445): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(October\\Rain\\Database\\Builder), Array)\n#10 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1137): Illuminate\\Database\\Eloquent\\Model->save(Array)\n#11 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1170): October\\Rain\\Database\\Model->saveInternal(Array)\n#12 C:\\laragon\\www\\wl\\modules\\backend\\behaviors\\FormController.php(271): October\\Rain\\Database\\Model->save(NULL, \'HgeeaGze2I8Aw0c...\')\n#13 [internal function]: Backend\\Behaviors\\FormController->update_onSave(\'1\')\n#14 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\ExtendableTrait.php(371): call_user_func_array(Array, Array)\n#15 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\Extendable.php(42): October\\Rain\\Extension\\Extendable->extendableCall(\'update_onSave\', Array)\n#16 [internal function]: October\\Rain\\Extension\\Extendable->__call(\'update_onSave\', Array)\n#17 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(521): call_user_func_array(Array, Array)\n#18 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(417): Backend\\Classes\\Controller->runAjaxHandler(\'onSave\')\n#19 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(227): Backend\\Classes\\Controller->execAjaxHandlers()\n#20 C:\\laragon\\www\\wl\\modules\\backend\\classes\\BackendController.php(106): Backend\\Classes\\Controller->run(\'update\', Array)\n#21 [internal function]: Backend\\Classes\\BackendController->run(\'grcote7/movies/...\')\n#22 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(256): call_user_func_array(Array, Array)\n#23 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(164): Illuminate\\Routing\\Controller->callAction(\'run\', Array)\n#24 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(112): Illuminate\\Routing\\ControllerDispatcher->call(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), \'run\')\n#25 [internal function]: Illuminate\\Routing\\ControllerDispatcher->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#26 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#27 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#28 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#29 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(114): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#30 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(68): Illuminate\\Routing\\ControllerDispatcher->callWithinStack(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'run\')\n#31 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(203): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'Backend\\\\Classes...\', \'run\')\n#32 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(134): Illuminate\\Routing\\Route->runWithCustomDispatcher(Object(Illuminate\\Http\\Request))\n#33 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(708): Illuminate\\Routing\\Route->run(Object(Illuminate\\Http\\Request))\n#34 [internal function]: Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#35 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#36 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#37 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#38 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(710): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#39 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(674): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))\n#40 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))\n#41 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(236): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))\n#42 [internal function]: Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))\n#43 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#44 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#45 [internal function]: Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#46 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#47 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#48 [internal function]: Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#49 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#50 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#51 [internal function]: Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#52 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#53 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#54 [internal function]: Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#55 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#56 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#57 [internal function]: Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#58 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#59 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#60 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#61 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(122): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#62 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(87): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))\n#63 C:\\laragon\\www\\wl\\index.php(43): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))\n#64 {main}\n\nNext Illuminate\\Database\\QueryException: SQLSTATE[42S22]: Column not found: 1054 Unknown column \'slug\' in \'field list\' (SQL: update `grcote7_movies_films` set `description` = <p>Catastrophe</p>\r\n\r\n<p>Lorem ipsum dolo sit amet, consectetur adipisicing elit. Aspernatur incidunt tempora eum voluptate nisi expedita, doloremque voluptatibus recusandae ducimus aliquid!</p>\r\n\r\n<p>Enim reiciendis obcaecati ipsum, maxime, praesentium facilis animi quaerat Ullam rerum, libero ipsam quam quasi nesciunt neque repellat voluptate cum!</p>\r\n\r\n<p>Est necessitatibus, alias rem, dolore facilis aspernatur totam at sit nisi repellendus laborum velit eveniet quos eum voluptas sed illo!</p>, `slug` = 1 where `id` = ?) in C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:666\nStack trace:\n#0 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(622): Illuminate\\Database\\Connection->runQueryCallback(\'update `grcote7...\', Array, Object(Closure))\n#1 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->run(\'update `grcote7...\', Array, Object(Closure))\n#2 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->affectingStatement(\'update `grcote7...\', Array)\n#3 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1858): Illuminate\\Database\\Connection->update(\'update `grcote7...\', Array)\n#4 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\QueryBuilder.php(233): Illuminate\\Database\\Query\\Builder->update(Array)\n#5 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(384): October\\Rain\\Database\\QueryBuilder->update(Array)\n#6 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1526): Illuminate\\Database\\Eloquent\\Builder->update(Array)\n#7 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1445): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(October\\Rain\\Database\\Builder), Array)\n#8 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1137): Illuminate\\Database\\Eloquent\\Model->save(Array)\n#9 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1170): October\\Rain\\Database\\Model->saveInternal(Array)\n#10 C:\\laragon\\www\\wl\\modules\\backend\\behaviors\\FormController.php(271): October\\Rain\\Database\\Model->save(NULL, \'HgeeaGze2I8Aw0c...\')\n#11 [internal function]: Backend\\Behaviors\\FormController->update_onSave(\'1\')\n#12 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\ExtendableTrait.php(371): call_user_func_array(Array, Array)\n#13 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\Extendable.php(42): October\\Rain\\Extension\\Extendable->extendableCall(\'update_onSave\', Array)\n#14 [internal function]: October\\Rain\\Extension\\Extendable->__call(\'update_onSave\', Array)\n#15 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(521): call_user_func_array(Array, Array)\n#16 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(417): Backend\\Classes\\Controller->runAjaxHandler(\'onSave\')\n#17 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(227): Backend\\Classes\\Controller->execAjaxHandlers()\n#18 C:\\laragon\\www\\wl\\modules\\backend\\classes\\BackendController.php(106): Backend\\Classes\\Controller->run(\'update\', Array)\n#19 [internal function]: Backend\\Classes\\BackendController->run(\'grcote7/movies/...\')\n#20 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(256): call_user_func_array(Array, Array)\n#21 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(164): Illuminate\\Routing\\Controller->callAction(\'run\', Array)\n#22 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(112): Illuminate\\Routing\\ControllerDispatcher->call(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), \'run\')\n#23 [internal function]: Illuminate\\Routing\\ControllerDispatcher->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#24 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#25 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#26 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#27 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(114): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#28 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(68): Illuminate\\Routing\\ControllerDispatcher->callWithinStack(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'run\')\n#29 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(203): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'Backend\\\\Classes...\', \'run\')\n#30 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(134): Illuminate\\Routing\\Route->runWithCustomDispatcher(Object(Illuminate\\Http\\Request))\n#31 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(708): Illuminate\\Routing\\Route->run(Object(Illuminate\\Http\\Request))\n#32 [internal function]: Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#33 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#34 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#35 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#36 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(710): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#37 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(674): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))\n#38 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))\n#39 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(236): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))\n#40 [internal function]: Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))\n#41 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#42 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#43 [internal function]: Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#44 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#45 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#46 [internal function]: Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#47 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#48 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#49 [internal function]: Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#50 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#51 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#52 [internal function]: Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#53 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#54 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#55 [internal function]: Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#56 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#57 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#58 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#59 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(122): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#60 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(87): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))\n#61 C:\\laragon\\www\\wl\\index.php(43): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))\n#62 {main}', NULL, '2017-09-07 01:10:32', '2017-09-07 01:10:32'),
-(2, 'error', 'PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column \'slug\' in \'field list\' in C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:411\nStack trace:\n#0 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(411): PDO->prepare(\'update `grcote7...\')\n#1 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(659): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}(Object(October\\Rain\\Database\\Connections\\MySqlConnection), \'update `grcote7...\', Array)\n#2 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(622): Illuminate\\Database\\Connection->runQueryCallback(\'update `grcote7...\', Array, Object(Closure))\n#3 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->run(\'update `grcote7...\', Array, Object(Closure))\n#4 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->affectingStatement(\'update `grcote7...\', Array)\n#5 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1858): Illuminate\\Database\\Connection->update(\'update `grcote7...\', Array)\n#6 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\QueryBuilder.php(233): Illuminate\\Database\\Query\\Builder->update(Array)\n#7 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(384): October\\Rain\\Database\\QueryBuilder->update(Array)\n#8 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1526): Illuminate\\Database\\Eloquent\\Builder->update(Array)\n#9 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1445): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(October\\Rain\\Database\\Builder), Array)\n#10 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1137): Illuminate\\Database\\Eloquent\\Model->save(Array)\n#11 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1170): October\\Rain\\Database\\Model->saveInternal(Array)\n#12 C:\\laragon\\www\\wl\\modules\\backend\\behaviors\\FormController.php(271): October\\Rain\\Database\\Model->save(NULL, \'HgeeaGze2I8Aw0c...\')\n#13 [internal function]: Backend\\Behaviors\\FormController->update_onSave(\'1\')\n#14 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\ExtendableTrait.php(371): call_user_func_array(Array, Array)\n#15 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\Extendable.php(42): October\\Rain\\Extension\\Extendable->extendableCall(\'update_onSave\', Array)\n#16 [internal function]: October\\Rain\\Extension\\Extendable->__call(\'update_onSave\', Array)\n#17 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(521): call_user_func_array(Array, Array)\n#18 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(417): Backend\\Classes\\Controller->runAjaxHandler(\'onSave\')\n#19 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(227): Backend\\Classes\\Controller->execAjaxHandlers()\n#20 C:\\laragon\\www\\wl\\modules\\backend\\classes\\BackendController.php(106): Backend\\Classes\\Controller->run(\'update\', Array)\n#21 [internal function]: Backend\\Classes\\BackendController->run(\'grcote7/movies/...\')\n#22 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(256): call_user_func_array(Array, Array)\n#23 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(164): Illuminate\\Routing\\Controller->callAction(\'run\', Array)\n#24 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(112): Illuminate\\Routing\\ControllerDispatcher->call(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), \'run\')\n#25 [internal function]: Illuminate\\Routing\\ControllerDispatcher->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#26 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#27 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#28 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#29 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(114): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#30 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(68): Illuminate\\Routing\\ControllerDispatcher->callWithinStack(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'run\')\n#31 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(203): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'Backend\\\\Classes...\', \'run\')\n#32 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(134): Illuminate\\Routing\\Route->runWithCustomDispatcher(Object(Illuminate\\Http\\Request))\n#33 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(708): Illuminate\\Routing\\Route->run(Object(Illuminate\\Http\\Request))\n#34 [internal function]: Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#35 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#36 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#37 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#38 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(710): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#39 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(674): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))\n#40 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))\n#41 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(236): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))\n#42 [internal function]: Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))\n#43 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#44 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#45 [internal function]: Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#46 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#47 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#48 [internal function]: Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#49 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#50 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#51 [internal function]: Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#52 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#53 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#54 [internal function]: Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#55 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#56 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#57 [internal function]: Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#58 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#59 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#60 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#61 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(122): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#62 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(87): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))\n#63 C:\\laragon\\www\\wl\\index.php(43): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))\n#64 {main}\n\nNext Illuminate\\Database\\QueryException: SQLSTATE[42S22]: Column not found: 1054 Unknown column \'slug\' in \'field list\' (SQL: update `grcote7_movies_films` set `name` = Titanic on the Sea, `description` = <p>Catastrophe</p>\r\n\r\n<p>Lorem ipsum dolo sit amet, consectetur adipisicing elit. Aspernatur incidunt tempora eum voluptate nisi expedita, doloremque voluptatibus recusandae ducimus aliquid!</p>\r\n\r\n<p>Enim reiciendis obcaecati ipsum, maxime, praesentium facilis animi quaerattitanic-sea Ullam rerum, libero ipsam quam quasi nesciunt neque repellat voluptate cum!</p>\r\n\r\n<p>Est necessitatibus, alias rem, dolore facilis aspernatur totam at sit nisi repellendus laborum velit eveniet quos eum voluptas sed illo!</p>, `slug` = 1 where `id` = ?) in C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:666\nStack trace:\n#0 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(622): Illuminate\\Database\\Connection->runQueryCallback(\'update `grcote7...\', Array, Object(Closure))\n#1 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(416): Illuminate\\Database\\Connection->run(\'update `grcote7...\', Array, Object(Closure))\n#2 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->affectingStatement(\'update `grcote7...\', Array)\n#3 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(1858): Illuminate\\Database\\Connection->update(\'update `grcote7...\', Array)\n#4 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\QueryBuilder.php(233): Illuminate\\Database\\Query\\Builder->update(Array)\n#5 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(384): October\\Rain\\Database\\QueryBuilder->update(Array)\n#6 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1526): Illuminate\\Database\\Eloquent\\Builder->update(Array)\n#7 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1445): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(October\\Rain\\Database\\Builder), Array)\n#8 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1137): Illuminate\\Database\\Eloquent\\Model->save(Array)\n#9 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Database\\Model.php(1170): October\\Rain\\Database\\Model->saveInternal(Array)\n#10 C:\\laragon\\www\\wl\\modules\\backend\\behaviors\\FormController.php(271): October\\Rain\\Database\\Model->save(NULL, \'HgeeaGze2I8Aw0c...\')\n#11 [internal function]: Backend\\Behaviors\\FormController->update_onSave(\'1\')\n#12 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\ExtendableTrait.php(371): call_user_func_array(Array, Array)\n#13 C:\\laragon\\www\\wl\\vendor\\october\\rain\\src\\Extension\\Extendable.php(42): October\\Rain\\Extension\\Extendable->extendableCall(\'update_onSave\', Array)\n#14 [internal function]: October\\Rain\\Extension\\Extendable->__call(\'update_onSave\', Array)\n#15 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(521): call_user_func_array(Array, Array)\n#16 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(417): Backend\\Classes\\Controller->runAjaxHandler(\'onSave\')\n#17 C:\\laragon\\www\\wl\\modules\\backend\\classes\\Controller.php(227): Backend\\Classes\\Controller->execAjaxHandlers()\n#18 C:\\laragon\\www\\wl\\modules\\backend\\classes\\BackendController.php(106): Backend\\Classes\\Controller->run(\'update\', Array)\n#19 [internal function]: Backend\\Classes\\BackendController->run(\'grcote7/movies/...\')\n#20 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(256): call_user_func_array(Array, Array)\n#21 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(164): Illuminate\\Routing\\Controller->callAction(\'run\', Array)\n#22 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(112): Illuminate\\Routing\\ControllerDispatcher->call(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), \'run\')\n#23 [internal function]: Illuminate\\Routing\\ControllerDispatcher->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#24 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#25 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#26 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#27 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(114): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#28 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(68): Illuminate\\Routing\\ControllerDispatcher->callWithinStack(Object(Backend\\Classes\\BackendController), Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'run\')\n#29 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(203): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request), \'Backend\\\\Classes...\', \'run\')\n#30 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(134): Illuminate\\Routing\\Route->runWithCustomDispatcher(Object(Illuminate\\Http\\Request))\n#31 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(708): Illuminate\\Routing\\Route->run(Object(Illuminate\\Http\\Request))\n#32 [internal function]: Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))\n#33 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#34 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#35 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#36 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(710): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#37 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(674): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))\n#38 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(635): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))\n#39 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(236): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))\n#40 [internal function]: Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))\n#41 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(139): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#42 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#43 [internal function]: Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#44 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#45 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#46 [internal function]: Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#47 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#48 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#49 [internal function]: Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#50 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#51 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(59): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#52 [internal function]: Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#53 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#54 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#55 [internal function]: Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))\n#56 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(124): call_user_func_array(Array, Array)\n#57 [internal function]: Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))\n#58 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(102): call_user_func(Object(Closure), Object(Illuminate\\Http\\Request))\n#59 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(122): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))\n#60 C:\\laragon\\www\\wl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(87): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))\n#61 C:\\laragon\\www\\wl\\index.php(43): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))\n#62 {main}', NULL, '2017-09-07 01:11:35', '2017-09-07 01:11:35');
-
 -- --------------------------------------------------------
 
 --
@@ -1746,7 +1710,7 @@ CREATE TABLE `system_parameters` (
 --
 
 INSERT INTO `system_parameters` (`id`, `namespace`, `group`, `item`, `value`) VALUES
-(1, 'system', 'update', 'count', '8'),
+(1, 'system', 'update', 'count', '0'),
 (2, 'system', 'core', 'hash', '\"9c5af2e2c04126ed4fd4039c20d8bbb3\"'),
 (3, 'system', 'core', 'build', '\"420\"'),
 (4, 'cms', 'theme', 'active', '\"olympos\"'),
@@ -1931,7 +1895,166 @@ INSERT INTO `system_plugin_history` (`id`, `code`, `type`, `version`, `detail`, 
 (561, 'Grcote7.Movies', 'script', '1.0.4', 'builder_table_update_grcote7_movies_films_2.php', '2017-09-07 01:08:46'),
 (562, 'Grcote7.Movies', 'comment', '1.0.4', 'Updated table grcote7_movies_films', '2017-09-07 01:08:46'),
 (563, 'Grcote7.Movies', 'script', '1.0.5', 'builder_table_update_grcote7_movies_films_3.php', '2017-09-07 01:12:56'),
-(564, 'Grcote7.Movies', 'comment', '1.0.5', 'Updated table grcote7_movies_films', '2017-09-07 01:12:56');
+(564, 'Grcote7.Movies', 'comment', '1.0.5', 'Updated table grcote7_movies_films', '2017-09-07 01:12:56'),
+(565, 'Bluhex.YouTube', 'comment', '1.0.1', 'First version of Bluhex - YouTube Videos', '2017-09-07 01:30:03'),
+(566, 'Bluhex.YouTube', 'comment', '1.0.2', 'Made YouTube client more accessible to third parties', '2017-09-07 01:30:04'),
+(567, 'Bluhex.YouTube', 'comment', '1.0.3', 'Thumbnail resolution is now selectable', '2017-09-07 01:30:04'),
+(568, 'Bluhex.YouTube', 'comment', '1.0.4', 'Fixed caching issue causing no results to display', '2017-09-07 01:30:04'),
+(569, 'Bluhex.YouTube', 'comment', '1.0.5', 'Made thumbnail resolution selection easier', '2017-09-07 01:30:04'),
+(570, 'Bluhex.YouTube', 'comment', '1.0.6', 'Updated to the latest Google API Library', '2017-09-07 01:30:04'),
+(571, 'Bluhex.YouTube', 'comment', '1.0.7', 'Full resolution thumbnails are now loaded over https', '2017-09-07 01:30:04'),
+(572, 'Bluhex.YouTube', 'comment', '1.0.8', 'Fixed video links working over https but not thumbnails.', '2017-09-07 01:30:04'),
+(573, 'Hambern.Html5media', 'comment', '1.0.1', 'First version of Html5media', '2017-09-07 01:30:04'),
+(574, 'Mohsin.Txt', 'comment', '1.0.1', 'First version of Txt', '2017-09-07 01:30:04'),
+(575, 'Mohsin.Txt', 'script', '1.0.2', 'create_humans_table.php', '2017-09-07 01:30:46'),
+(576, 'Mohsin.Txt', 'script', '1.0.2', 'Created Robots Table', '2017-09-07 01:30:46'),
+(577, 'Mohsin.Txt', 'script', '1.0.2', 'create_robots_table.php', '2017-09-07 01:31:14'),
+(578, 'Mohsin.Txt', 'script', '1.0.2', 'Created Directives Table', '2017-09-07 01:31:14'),
+(579, 'Mohsin.Txt', 'script', '1.0.2', 'create_directives_table.php', '2017-09-07 01:31:33'),
+(580, 'Mohsin.Txt', 'script', '1.0.2', 'Created Agents Table', '2017-09-07 01:31:33'),
+(581, 'Mohsin.Txt', 'script', '1.0.2', 'create_agents_table.php', '2017-09-07 01:31:33'),
+(582, 'Mohsin.Txt', 'script', '1.0.2', 'Created Information Table', '2017-09-07 01:31:33'),
+(583, 'Mohsin.Txt', 'script', '1.0.2', 'create_information_table.php', '2017-09-07 01:31:50'),
+(584, 'Mohsin.Txt', 'comment', '1.0.2', 'Created Humans Table', '2017-09-07 01:31:50'),
+(585, 'Mohsin.Txt', 'script', '1.0.3', 'seed_agents_table.php', '2017-09-07 01:31:50'),
+(586, 'Mohsin.Txt', 'comment', '1.0.3', 'Add seed data for agents table.', '2017-09-07 01:31:50'),
+(587, 'Mohsin.Txt', 'comment', '1.0.4', 'Minor Bug Fix', '2017-09-07 01:31:50'),
+(588, 'Mohsin.Txt', 'comment', '1.0.5', 'Added compatability with RainLab.Sitemap', '2017-09-07 01:31:50'),
+(589, 'Mohsin.Txt', 'comment', '1.0.6', 'Added setting permissions. PR by @matissjanis', '2017-09-07 01:31:50'),
+(590, 'Mohsin.Txt', 'comment', '1.0.7', 'Added new type for directive', '2017-09-07 01:31:50'),
+(591, 'Mohsin.Txt', 'comment', '1.0.8', '!!! Important bug fix', '2017-09-07 01:31:50'),
+(592, 'Mohsin.Txt', 'comment', '1.0.9', 'Download Txt Feature', '2017-09-07 01:31:50'),
+(593, 'Mohsin.Txt', 'script', '1.1.0', 'refactor_settings_human_fields.php', '2017-09-07 01:31:50'),
+(594, 'Mohsin.Txt', 'comment', '1.1.0', 'Updated human field labels to repeater', '2017-09-07 01:31:50'),
+(595, 'Mohsin.Txt', 'comment', '1.1.1', 'Upgraded Agents to use ImportExport behavior than custom code.', '2017-09-07 01:31:50'),
+(596, 'Mohsin.Txt', 'script', '1.1.2', 'drop_timestamps.php', '2017-09-07 01:31:52'),
+(597, 'Mohsin.Txt', 'comment', '1.1.2', 'Database maintenance. Removed all the unused timestamp columns.', '2017-09-07 01:31:52'),
+(598, 'RainLab.Pages', 'comment', '1.0.1', 'Implemented the static pages management and the Static Page component.', '2017-09-07 01:31:52'),
+(599, 'RainLab.Pages', 'comment', '1.0.2', 'Fixed the page preview URL.', '2017-09-07 01:31:52'),
+(600, 'RainLab.Pages', 'comment', '1.0.3', 'Implemented menus.', '2017-09-07 01:31:52'),
+(601, 'RainLab.Pages', 'comment', '1.0.4', 'Implemented the content block management and placeholder support.', '2017-09-07 01:31:52'),
+(602, 'RainLab.Pages', 'comment', '1.0.5', 'Added support for the Sitemap plugin.', '2017-09-07 01:31:52'),
+(603, 'RainLab.Pages', 'comment', '1.0.6', 'Minor updates to the internal API.', '2017-09-07 01:31:52'),
+(604, 'RainLab.Pages', 'comment', '1.0.7', 'Added the Snippets feature.', '2017-09-07 01:31:52'),
+(605, 'RainLab.Pages', 'comment', '1.0.8', 'Minor improvements to the code.', '2017-09-07 01:31:52'),
+(606, 'RainLab.Pages', 'comment', '1.0.9', 'Fixes issue where Snippet tab is missing from the Partials form.', '2017-09-07 01:31:52'),
+(607, 'RainLab.Pages', 'comment', '1.0.10', 'Add translations for various locales.', '2017-09-07 01:31:52'),
+(608, 'RainLab.Pages', 'comment', '1.0.11', 'Fixes issue where placeholders tabs were missing from Page form.', '2017-09-07 01:31:52'),
+(609, 'RainLab.Pages', 'comment', '1.0.12', 'Implement Media Manager support.', '2017-09-07 01:31:52'),
+(610, 'RainLab.Pages', 'script', '1.1.0', 'snippets_rename_viewbag_properties.php', '2017-09-07 01:31:52'),
+(611, 'RainLab.Pages', 'comment', '1.1.0', 'Adds meta title and description to pages. Adds |staticPage filter.', '2017-09-07 01:31:52'),
+(612, 'RainLab.Pages', 'comment', '1.1.1', 'Add support for Syntax Fields.', '2017-09-07 01:31:53'),
+(613, 'RainLab.Pages', 'comment', '1.1.2', 'Static Breadcrumbs component now respects the hide from navigation setting.', '2017-09-07 01:31:53'),
+(614, 'RainLab.Pages', 'comment', '1.1.3', 'Minor back-end styling fix.', '2017-09-07 01:31:53'),
+(615, 'RainLab.Pages', 'comment', '1.1.4', 'Minor fix to the StaticPage component API.', '2017-09-07 01:31:53'),
+(616, 'RainLab.Pages', 'comment', '1.1.5', 'Fixes bug when using syntax fields.', '2017-09-07 01:31:53'),
+(617, 'RainLab.Pages', 'comment', '1.1.6', 'Minor styling fix to the back-end UI.', '2017-09-07 01:31:53'),
+(618, 'RainLab.Pages', 'comment', '1.1.7', 'Improved menu item form to include CSS class, open in a new window and hidden flag.', '2017-09-07 01:31:53'),
+(619, 'RainLab.Pages', 'comment', '1.1.8', 'Improved the output of snippet partials when saved.', '2017-09-07 01:31:53'),
+(620, 'RainLab.Pages', 'comment', '1.1.9', 'Minor update to snippet inspector internal API.', '2017-09-07 01:31:53'),
+(621, 'RainLab.Pages', 'comment', '1.1.10', 'Fixes a bug where selecting a layout causes permanent unsaved changes.', '2017-09-07 01:31:53'),
+(622, 'RainLab.Pages', 'comment', '1.1.11', 'Add support for repeater syntax field.', '2017-09-07 01:31:53'),
+(623, 'RainLab.Pages', 'comment', '1.2.0', 'Added support for translations, UI updates.', '2017-09-07 01:31:53'),
+(624, 'RainLab.Pages', 'comment', '1.2.1', 'Use nice titles when listing the content files.', '2017-09-07 01:31:53'),
+(625, 'RainLab.Pages', 'comment', '1.2.2', 'Minor styling update.', '2017-09-07 01:31:53'),
+(626, 'RainLab.Pages', 'comment', '1.2.3', 'Snippets can now be moved by dragging them.', '2017-09-07 01:31:53'),
+(627, 'RainLab.Pages', 'comment', '1.2.4', 'Fixes a bug where the cursor is misplaced when editing text files.', '2017-09-07 01:31:53'),
+(628, 'RainLab.Pages', 'comment', '1.2.5', 'Fixes a bug where the parent page is lost upon changing a page layout.', '2017-09-07 01:31:53'),
+(629, 'RainLab.Pages', 'comment', '1.2.6', 'Shared view variables are now passed to static pages.', '2017-09-07 01:31:53'),
+(630, 'RainLab.Pages', 'comment', '1.2.7', 'Fixes issue with duplicating properties when adding multiple snippets on the same page.', '2017-09-07 01:31:53'),
+(631, 'RainLab.Pages', 'comment', '1.2.8', 'Fixes a bug where creating a content block without extension doesn\'t save the contents to file.', '2017-09-07 01:31:53'),
+(632, 'RainLab.Pages', 'comment', '1.2.9', 'Add conditional support for translating page URLs.', '2017-09-07 01:31:53'),
+(633, 'RainLab.Pages', 'comment', '1.2.10', 'Streamline generation of URLs to use the new Cms::url helper.', '2017-09-07 01:31:53'),
+(634, 'RainLab.Pages', 'comment', '1.2.11', 'Implements repeater usage with translate plugin.', '2017-09-07 01:31:53'),
+(635, 'RainLab.Pages', 'comment', '1.2.12', 'Fixes minor issue when using snippets and switching the application locale.', '2017-09-07 01:31:53'),
+(636, 'RainLab.Pages', 'comment', '1.2.13', 'Fixes bug when AJAX is used on a page that does not yet exist.', '2017-09-07 01:31:53'),
+(637, 'RainLab.Pages', 'comment', '1.2.14', 'Add theme logging support for changes made to menus.', '2017-09-07 01:31:53'),
+(638, 'RainLab.Pages', 'comment', '1.2.15', 'Back-end navigation sort order updated.', '2017-09-07 01:31:53'),
+(639, 'RainLab.Pages', 'comment', '1.2.16', 'Fixes a bug when saving a template that has been modified outside of the CMS (mtime mismatch).', '2017-09-07 01:31:53'),
+(640, 'RainLab.User', 'script', '1.0.1', 'create_users_table.php', '2017-09-07 01:32:17'),
+(641, 'RainLab.User', 'script', '1.0.1', 'create_throttle_table.php', '2017-09-07 01:32:18'),
+(642, 'RainLab.User', 'comment', '1.0.1', 'Initialize plugin.', '2017-09-07 01:32:18'),
+(643, 'RainLab.User', 'comment', '1.0.2', 'Seed tables.', '2017-09-07 01:32:18'),
+(644, 'RainLab.User', 'comment', '1.0.3', 'Translated hard-coded text to language strings.', '2017-09-07 01:32:18'),
+(645, 'RainLab.User', 'comment', '1.0.4', 'Improvements to user-interface for Location manager.', '2017-09-07 01:32:18'),
+(646, 'RainLab.User', 'comment', '1.0.5', 'Added contact details for users.', '2017-09-07 01:32:18'),
+(647, 'RainLab.User', 'script', '1.0.6', 'create_mail_blockers_table.php', '2017-09-07 01:32:37'),
+(648, 'RainLab.User', 'comment', '1.0.6', 'Added Mail Blocker utility so users can block specific mail templates.', '2017-09-07 01:32:37'),
+(649, 'RainLab.User', 'comment', '1.0.7', 'Add back-end Settings page.', '2017-09-07 01:32:37'),
+(650, 'RainLab.User', 'comment', '1.0.8', 'Updated the Settings page.', '2017-09-07 01:32:37'),
+(651, 'RainLab.User', 'comment', '1.0.9', 'Adds new welcome mail message for users and administrators.', '2017-09-07 01:32:37'),
+(652, 'RainLab.User', 'comment', '1.0.10', 'Adds administrator-only activation mode.', '2017-09-07 01:32:37'),
+(653, 'RainLab.User', 'script', '1.0.11', 'users_add_login_column.php', '2017-09-07 01:32:38'),
+(654, 'RainLab.User', 'comment', '1.0.11', 'Users now have an optional login field that defaults to the email field.', '2017-09-07 01:32:38'),
+(655, 'RainLab.User', 'script', '1.0.12', 'users_rename_login_to_username.php', '2017-09-07 01:32:38'),
+(656, 'RainLab.User', 'comment', '1.0.12', 'Create a dedicated setting for choosing the login mode.', '2017-09-07 01:32:38'),
+(657, 'RainLab.User', 'comment', '1.0.13', 'Minor fix to the Account sign in logic.', '2017-09-07 01:32:38'),
+(658, 'RainLab.User', 'comment', '1.0.14', 'Minor improvements to the code.', '2017-09-07 01:32:38'),
+(659, 'RainLab.User', 'script', '1.0.15', 'users_add_surname.php', '2017-09-07 01:32:39'),
+(660, 'RainLab.User', 'comment', '1.0.15', 'Adds last name column to users table (surname).', '2017-09-07 01:32:39'),
+(661, 'RainLab.User', 'comment', '1.0.16', 'Require permissions for settings page too.', '2017-09-07 01:32:39'),
+(662, 'RainLab.User', 'comment', '1.1.0', '!!! Profile fields and Locations have been removed.', '2017-09-07 01:32:39'),
+(663, 'RainLab.User', 'script', '1.1.1', 'create_user_groups_table.php', '2017-09-07 01:32:39'),
+(664, 'RainLab.User', 'script', '1.1.1', 'seed_user_groups_table.php', '2017-09-07 01:32:40'),
+(665, 'RainLab.User', 'comment', '1.1.1', 'Users can now be added to groups.', '2017-09-07 01:32:40'),
+(666, 'RainLab.User', 'comment', '1.1.2', 'A raw URL can now be passed as the redirect property in the Account component.', '2017-09-07 01:32:40'),
+(667, 'RainLab.User', 'comment', '1.1.3', 'Adds a super user flag to the users table, reserved for future use.', '2017-09-07 01:32:40'),
+(668, 'RainLab.User', 'comment', '1.1.4', 'User list can be filtered by the group they belong to.', '2017-09-07 01:32:40'),
+(669, 'RainLab.User', 'comment', '1.1.5', 'Adds a new permission to hide the User settings menu item.', '2017-09-07 01:32:40'),
+(670, 'RainLab.User', 'script', '1.2.0', 'users_add_deleted_at.php', '2017-09-07 01:32:40'),
+(671, 'RainLab.User', 'comment', '1.2.0', 'Users can now deactivate their own accounts.', '2017-09-07 01:32:40'),
+(672, 'RainLab.User', 'comment', '1.2.1', 'New feature for checking if a user is recently active/online.', '2017-09-07 01:32:40'),
+(673, 'RainLab.User', 'comment', '1.2.2', 'Add bulk action button to user list.', '2017-09-07 01:32:40'),
+(674, 'RainLab.User', 'comment', '1.2.3', 'Included some descriptive paragraphs in the Reset Password component markup.', '2017-09-07 01:32:40'),
+(675, 'RainLab.User', 'comment', '1.2.4', 'Added a checkbox for blocking all mail sent to the user.', '2017-09-07 01:32:40'),
+(676, 'RainLab.User', 'script', '1.2.5', 'update_timestamp_nullable.php', '2017-09-07 01:32:40'),
+(677, 'RainLab.User', 'comment', '1.2.5', 'Database maintenance. Updated all timestamp columns to be nullable.', '2017-09-07 01:32:40'),
+(678, 'RainLab.User', 'script', '1.2.6', 'users_add_last_seen.php', '2017-09-07 01:32:41'),
+(679, 'RainLab.User', 'comment', '1.2.6', 'Add a dedicated last seen column for users.', '2017-09-07 01:32:41'),
+(680, 'RainLab.User', 'comment', '1.2.7', 'Minor fix to user timestamp attributes.', '2017-09-07 01:32:41'),
+(681, 'RainLab.User', 'comment', '1.2.8', 'Add date range filter to users list. Introduced a logout event.', '2017-09-07 01:32:41'),
+(682, 'RainLab.User', 'comment', '1.2.9', 'Add invitation mail for new accounts created in the back-end.', '2017-09-07 01:32:41'),
+(683, 'RainLab.User', 'script', '1.3.0', 'users_add_guest_flag.php', '2017-09-07 01:32:41'),
+(684, 'RainLab.User', 'script', '1.3.0', 'users_add_superuser_flag.php', '2017-09-07 01:32:42'),
+(685, 'RainLab.User', 'comment', '1.3.0', 'Introduced guest user accounts.', '2017-09-07 01:32:42'),
+(686, 'RainLab.User', 'comment', '1.3.1', 'User notification variables can now be extended.', '2017-09-07 01:32:42'),
+(687, 'RainLab.User', 'comment', '1.3.2', 'Minor fix to the Auth::register method.', '2017-09-07 01:32:42'),
+(688, 'RainLab.User', 'comment', '1.3.3', 'Allow prevention of concurrent user sessions via the user settings.', '2017-09-07 01:32:42'),
+(689, 'RainLab.User', 'comment', '1.3.4', 'Added force secure protocol property to the account component.', '2017-09-07 01:32:42'),
+(690, 'RainLab.Forum', 'script', '1.0.1', 'create_channels_table.php', '2017-09-07 01:33:13'),
+(691, 'RainLab.Forum', 'script', '1.0.1', 'create_posts_table.php', '2017-09-07 01:33:13'),
+(692, 'RainLab.Forum', 'script', '1.0.1', 'create_topics_table.php', '2017-09-07 01:33:14'),
+(693, 'RainLab.Forum', 'script', '1.0.1', 'create_members_table.php', '2017-09-07 01:33:15'),
+(694, 'RainLab.Forum', 'script', '1.0.1', 'seed_all_tables.php', '2017-09-07 01:33:16'),
+(695, 'RainLab.Forum', 'comment', '1.0.1', 'First version of Forum', '2017-09-07 01:33:16'),
+(696, 'RainLab.Forum', 'script', '1.0.2', 'create_topic_watches_table.php', '2017-09-07 01:33:16'),
+(697, 'RainLab.Forum', 'comment', '1.0.2', 'Add unread flags to topics', '2017-09-07 01:33:16'),
+(698, 'RainLab.Forum', 'script', '1.0.3', 'members_add_mod_and_ban.php', '2017-09-07 01:33:17'),
+(699, 'RainLab.Forum', 'comment', '1.0.3', 'Users can now be made moderators or be banned', '2017-09-07 01:33:17'),
+(700, 'RainLab.Forum', 'script', '1.0.4', 'channels_add_hidden_and_moderated.php', '2017-09-07 01:33:17'),
+(701, 'RainLab.Forum', 'comment', '1.0.4', 'Channels can now be hidden or moderated', '2017-09-07 01:33:17'),
+(702, 'RainLab.Forum', 'script', '1.0.5', 'add_embed_code.php', '2017-09-07 01:33:18'),
+(703, 'RainLab.Forum', 'comment', '1.0.5', 'Introduced topic and channel embedding', '2017-09-07 01:33:18'),
+(704, 'RainLab.Forum', 'script', '1.0.6', 'create_channel_watches_table.php', '2017-09-07 01:33:19'),
+(705, 'RainLab.Forum', 'comment', '1.0.6', 'Add unread flags to channels', '2017-09-07 01:33:19'),
+(706, 'RainLab.Forum', 'script', '1.0.7', 'create_topic_followers_table.php', '2017-09-07 01:33:19'),
+(707, 'RainLab.Forum', 'comment', '1.0.7', 'Forum members can now follow topics', '2017-09-07 01:33:19'),
+(708, 'RainLab.Forum', 'comment', '1.0.8', 'Added Channel name to the Topics component view', '2017-09-07 01:33:19'),
+(709, 'RainLab.Forum', 'comment', '1.0.9', 'Updated the Settings page', '2017-09-07 01:33:20'),
+(710, 'RainLab.Forum', 'comment', '1.0.10', 'Users can now report spammers who can be banned by moderators.', '2017-09-07 01:33:20'),
+(711, 'RainLab.Forum', 'comment', '1.0.11', 'Users can now quote other posts.', '2017-09-07 01:33:20'),
+(712, 'RainLab.Forum', 'comment', '1.0.12', 'Improve support for CDN asset hosting.', '2017-09-07 01:33:20'),
+(713, 'RainLab.Forum', 'comment', '1.0.13', 'Fixes a bug where channels cannot be selected in the Embed component inspector.', '2017-09-07 01:33:20'),
+(714, 'RainLab.Forum', 'comment', '1.0.14', 'Improve the pagination code used in the component default markup.', '2017-09-07 01:33:20'),
+(715, 'RainLab.Forum', 'comment', '1.0.15', 'When a User is deleted, their Member profile and posts is also deleted.', '2017-09-07 01:33:20'),
+(716, 'RainLab.Forum', 'comment', '1.0.16', 'Posting topics is now throttled allowing 3 new topics every 15 minutes.', '2017-09-07 01:33:20'),
+(717, 'RainLab.Forum', 'comment', '1.0.17', 'Update channel reorder page to new system reordering feature.', '2017-09-07 01:33:20'),
+(718, 'RainLab.Forum', 'comment', '1.0.18', 'Minor fix to embed topic component.', '2017-09-07 01:33:20'),
+(719, 'RainLab.Forum', 'script', '1.0.19', 'update_timestamp_nullable.php', '2017-09-07 01:33:20'),
+(720, 'RainLab.Forum', 'comment', '1.0.19', 'Database maintenance. Updated all timestamp columns to be nullable.', '2017-09-07 01:33:20'),
+(721, 'RainLab.Forum', 'script', '1.1.0', 'drop_watches_tables.php', '2017-09-07 01:33:20'),
+(722, 'RainLab.Forum', 'comment', '1.1.0', 'Major performance enhancements', '2017-09-07 01:33:20'),
+(723, 'RainLab.Forum', 'comment', '1.1.1', 'Fixes bug throwing error when a forum topic has no posts.', '2017-09-07 01:33:20');
 
 -- --------------------------------------------------------
 
@@ -1953,12 +2076,18 @@ CREATE TABLE `system_plugin_versions` (
 --
 
 INSERT INTO `system_plugin_versions` (`id`, `code`, `version`, `created_at`, `is_disabled`, `is_frozen`) VALUES
-(3, 'RainLab.Blog', '1.2.9', '2017-09-06 22:33:06', 0, 0),
+(3, 'RainLab.Blog', '1.2.16', '2017-09-07 01:31:52', 0, 0),
 (5, 'October.Demo', '1.0.1', '2016-05-16 09:06:51', 0, 0),
 (7, 'BnB.ScaffoldTranslation', '1.2.0', '2017-09-06 20:17:18', 0, 0),
 (12, 'Indikator.Backend', '1.6.3', '2017-04-16 16:36:20', 0, 0),
-(18, 'RainLab.Builder', '1.0.10', '2017-09-06 22:33:06', 0, 0),
-(30, 'Grcote7.Movies', '1.0.5', '2017-09-07 01:12:56', 0, 0);
+(18, 'RainLab.Builder', '1.0.21', '2017-09-07 01:31:52', 0, 0),
+(30, 'Grcote7.Movies', '1.0.5', '2017-09-07 01:12:56', 0, 0),
+(33, 'Bluhex.YouTube', '1.0.8', '2017-09-07 01:30:04', 0, 0),
+(34, 'Hambern.Html5media', '1.0.1', '2017-09-07 01:30:04', 0, 0),
+(35, 'Mohsin.Txt', '1.1.2', '2017-09-07 01:31:52', 0, 0),
+(36, 'RainLab.Pages', '1.2.16', '2017-09-07 01:31:53', 0, 0),
+(37, 'RainLab.User', '1.3.4', '2017-09-07 01:32:42', 0, 0),
+(38, 'RainLab.Forum', '1.1.1', '2017-09-07 01:33:20', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1975,18 +2104,6 @@ CREATE TABLE `system_request_logs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `system_request_logs`
---
-
-INSERT INTO `system_request_logs` (`id`, `status_code`, `url`, `referer`, `count`, `created_at`, `updated_at`) VALUES
-(1, 404, 'http://wl/film/1', NULL, 2, '2017-09-07 00:43:57', '2017-09-07 00:45:20'),
-(2, 404, 'http://wl/favicon.ico', '[\"http:\\/\\/wl\\/film\\/1\"]', 2, '2017-09-07 00:44:01', '2017-09-07 01:19:11'),
-(3, 404, 'http://wl/themes/olympos/assets/images/october.png', '[\"http:\\/\\/wl\\/films\"]', 26, '2017-09-07 00:48:12', '2017-09-07 01:19:37'),
-(4, 404, 'http://wl/films?livePage=1504754348245', '[\"http:\\/\\/wl\\/films\"]', 1, '2017-09-07 01:19:08', '2017-09-07 01:19:08'),
-(5, 404, 'http://wl/films', '[\"http:\\/\\/wl\\/films\"]', 1, '2017-09-07 01:19:09', '2017-09-07 01:19:09'),
-(6, 404, 'http://wl/films?livePage=1504754350893', '[\"http:\\/\\/wl\\/films\"]', 1, '2017-09-07 01:19:11', '2017-09-07 01:19:11');
 
 -- --------------------------------------------------------
 
@@ -2061,13 +2178,6 @@ CREATE TABLE `users` (
   `is_superuser` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Déchargement des données de la table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `activation_code`, `persist_code`, `reset_password_code`, `permissions`, `is_activated`, `activated_at`, `last_login`, `created_at`, `updated_at`, `username`, `surname`, `deleted_at`, `last_seen`, `is_guest`, `is_superuser`) VALUES
-(1, 'Lionel', 'GrCOTE7@GMail.com', '$2y$10$VjJchCjKuavuvx8JVuQPhuHJwXa9pCfvhTjWSaLUhg3pgLhEoO.0e', NULL, '$2y$10$XzSGlyr/lRuMwewyRKtju.iJucz6VaNFIjxOd1Gah3Vdmv2i63zm.', NULL, NULL, 1, '2017-07-24 12:36:30', '2017-07-24 12:36:54', '2017-07-24 12:36:20', '2017-07-24 12:36:54', 'GrCOTE7@GMail.com', 'COTE', NULL, '2017-07-24 12:36:54', 0, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -2078,13 +2188,6 @@ CREATE TABLE `users_groups` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `user_group_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `users_groups`
---
-
-INSERT INTO `users_groups` (`user_id`, `user_group_id`) VALUES
-(1, 1);
 
 -- --------------------------------------------------------
 
@@ -2106,7 +2209,8 @@ CREATE TABLE `user_groups` (
 --
 
 INSERT INTO `user_groups` (`id`, `name`, `code`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Sample group', 'sample', 'Sample group for website users.', '2016-05-14 08:01:27', '2016-05-14 08:01:27');
+(1, 'Guest', 'guest', 'Default group for guest users.', '2017-09-07 01:32:39', '2017-09-07 01:32:39'),
+(2, 'Registered', 'registered', 'Default group for registered users.', '2017-09-07 01:32:40', '2017-09-07 01:32:40');
 
 -- --------------------------------------------------------
 
@@ -2125,13 +2229,6 @@ CREATE TABLE `user_throttle` (
   `is_banned` tinyint(1) NOT NULL DEFAULT '0',
   `banned_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Déchargement des données de la table `user_throttle`
---
-
-INSERT INTO `user_throttle` (`id`, `user_id`, `ip_address`, `attempts`, `last_attempt_at`, `is_suspended`, `suspended_at`, `is_banned`, `banned_at`) VALUES
-(1, 1, '127.0.0.1', 0, NULL, 0, NULL, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -2684,19 +2781,19 @@ ALTER TABLE `rainlab_forum_channels`
 -- AUTO_INCREMENT pour la table `rainlab_forum_members`
 --
 ALTER TABLE `rainlab_forum_members`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `rainlab_forum_posts`
 --
 ALTER TABLE `rainlab_forum_posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `rainlab_forum_topics`
 --
 ALTER TABLE `rainlab_forum_topics`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `rainlab_location_countries`
@@ -2756,7 +2853,7 @@ ALTER TABLE `renatio_dynamicpdf_pdf_templates`
 -- AUTO_INCREMENT pour la table `system_event_logs`
 --
 ALTER TABLE `system_event_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `system_files`
@@ -2786,19 +2883,19 @@ ALTER TABLE `system_parameters`
 -- AUTO_INCREMENT pour la table `system_plugin_history`
 --
 ALTER TABLE `system_plugin_history`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=565;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=724;
 
 --
 -- AUTO_INCREMENT pour la table `system_plugin_versions`
 --
 ALTER TABLE `system_plugin_versions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT pour la table `system_request_logs`
 --
 ALTER TABLE `system_request_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `system_revisions`
@@ -2816,19 +2913,19 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `user_groups`
 --
 ALTER TABLE `user_groups`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `user_throttle`
 --
 ALTER TABLE `user_throttle`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `watchlearn_movies_`
