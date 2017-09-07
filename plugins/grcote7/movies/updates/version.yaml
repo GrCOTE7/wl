@@ -6,3 +6,9 @@
 1.0.3:
     - 'Updated table grcote7_movies_'
     - builder_table_update_grcote7_movies_films.php
+1.0.4:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_2.php
+1.0.5:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_3.php
