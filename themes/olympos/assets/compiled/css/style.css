@@ -205,17 +205,31 @@ body {
 }
 
 a {
-    color: #e81c4f;
-}
+  color: #e81c4f; }
+
+/*
+|--------------------------------------------------------------------------
+| Gallery
+|--------------------------------------------------------------------------
+*/
+.gallery {
+  padding: 20px 15px;
+  background: #efefef;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  .gallery li {
+    float: left;
+    margin: 5px; }
+  .gallery img, .gallery a {
+    display: block; }
 
 /* =======================================================================
 ## ++ Cleafix
 ========================================================================== */
 /* float clearing for IE6 */
 * html .clearfix {
-    height: 1%;
-    overflow: visible;
-}
+  height: 1%;
+  overflow: visible; }
 
 /* float clearing for IE7 */
 * + html .clearfix {

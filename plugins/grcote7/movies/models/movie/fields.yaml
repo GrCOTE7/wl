@@ -35,3 +35,15 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    movie_gallery:
+        label: 'Film Gallerie'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

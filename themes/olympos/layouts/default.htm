@@ -2,33 +2,33 @@ description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>OctoberCMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}" />
-        {% styles %}
-        <link href="{{ 'assets/sass/style.css'|theme }}" rel="stylesheet">
-    </head>
-    <body>
-       
-        {% partial "header" %}
+<head>
+    <meta charset="utf-8">
+    <title>OctoberCMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}"/>
+    {% styles %}
+    <link href="{{ 'assets/sass/style.css'|theme }}" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Content -->
-        <section id="layout-content" class="container clearfix">   
-            {% page %}
-        </section>
+{% partial "header" %}
 
-        {% partial "footer" %}
+<!-- Content -->
+<section id="layout-content" class="container clearfix">
+    {% page %}
+</section>
 
-        <!-- Scripts -->
-        <script src="{{ 'assets/compiled/js/all.js'|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+{% partial "footer" %}
 
-    </body>
+<!-- Scripts -->
+<script src="{{ 'assets/compiled/js/all.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
 </html>

@@ -10,18 +10,42 @@ modelKeyColumn = "slug"
 displayColumn = "name"
 notFoundMessage = "Record not found"
 ==
+
 {% set record = builderDetails.record %}
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
+
+<p><a href="/films"><-- Retour</a></p>
+
 {% if record %}
-    <h2>{{ record.name}}</h2>
+<h2>{{ record.name}}</h2>
 
-    <h4>{{ record.year }}</h4>
+<img src="{{ record.poster.thumb(200,auto) }}"/>
 
-    <h3>Description</h3>
+<h4>{{ record.year }}</h4>
 
-    {{ record.description|raw }}
+
+{% if record.movie_gallery|length %}
+
+<h3>Gallerie</h3>
+
+<ul class="gallery clearfix">
+    {% for image in record.movie_gallery %}
+    <li>
+        <a href="{{ image.path }}">
+            <img src="{{ image.thumb(80,80,{'mode':'crop'}) }}"/>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+<h3>Description</h3>
+
+{{ record.description|raw }}
+
 {% else %}
-    {{ notFoundMessage }}
+{{ notFoundMessage }}
 {% endif %}
