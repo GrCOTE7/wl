@@ -214,21 +214,11 @@ a {
     font-weight: 700;
     float: left; }
 
-.main-nav {
-  float: right; }
-  .main-nav li {
-    float: left; }
-  .main-nav a {
-    display: inline-block;
-    padding: 0 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700; }
-    .main-nav a:hover {
-      color: #fff; }
-  .main-nav li.active a {
-    text-decoration: underline; }
+h1 {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 2em;
+  color: blue; }
 
 .main-footer {
   background: #efefef;
