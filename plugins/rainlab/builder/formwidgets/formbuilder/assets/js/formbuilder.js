@@ -490,7 +490,7 @@
         var current = element
 
         while (current) {
-            if (current.hasAttribute && current.hasAttribute('data-control-container') ) {
+            if (current.hasAttribute('data-contol-container') ) {
                 return current
             }
 
@@ -784,9 +784,6 @@
 
     FormBuilder.prototype.onPlaceholderClick = function(ev) {
         this.displayControlPaletteForPlaceholder(ev.target)
-        ev.stopPropagation()
-        ev.preventDefault()
-        return false;
     }
 
     $(document).ready(function(){

@@ -39,6 +39,12 @@ class ModelList extends WidgetBase
         return $this->makePartial('body', $this->getRenderData());
     }
 
+
+    /**
+     * Returns information about this widget, including name and description.
+     */
+    public function widgetDetails() {}
+
     public function updateList()
     {
         return ['#'.$this->getId('plugin-model-list') => $this->makePartial('items', $this->getRenderData())];

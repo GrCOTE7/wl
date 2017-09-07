@@ -62,7 +62,7 @@
         for (var i=0, len=children.length; i<len; i++) {
             var child = children[i]
 
-            if (child.tagName !== 'DIV' || !child.hasAttribute('data-control-container') || !child.hasAttribute('data-container-name')) {
+            if (child.tagName !== 'DIV' || !child.hasAttribute('data-contol-container') || !child.hasAttribute('data-container-name')) {
                 continue
             }
 
@@ -135,39 +135,16 @@
 
         for (var i=0, len=controlLists.length; i<len; i++) {
             var controlList = controlLists[i],
-                currentListName = String(controlList.getAttribute('data-control-list')),
-                parentContainer = getControlListParentContainer(controlList)
-
-            /*
-             The check is disabled, because repeaters don't have list names. --ab Aug 7, 2016
-             See https://github.com/rainlab/builder-plugin/issues/74
+                currentListName = String(controlList.getAttribute('data-control-list'))
 
             if (currentListName.length === 0 || (listName !== null && currentListName != listName)) {
                 throw new Error('Lists in control list containers should have names, and the name should be equal for all lists in a container.')
             }
-            */
 
-            if (parentContainer === controlListContainer) {
-                result.push(controlList)
-            }
+            result.push(controlList)
         }
 
         return result
-    }
-
-    function getControlListParentContainer(controlList) {
-        var parent = controlList
-
-        while (parent) {
-            // This deals with control lists inside Repeater inside tabs
-            if (parent.hasAttribute('data-control-list-container') || parent.hasAttribute('data-control-container')) {
-                return parent
-            }
-
-            parent = parent.parentNode
-        }
-
-        return null
     }
 
     function mergeListContainerControlsToResult(result, container) {
@@ -208,40 +185,26 @@
         }
     }
 
-    function objectHasProperties(object) {
-        for (var k in object) {
-            return true
-        }
-
-        return false
-    }
-
     function mergeControlListControlsToResult(result, controls, listName) {
-        // The "fields" property name is fixed, but could be customized later if needed.
-
         if (listName.length > 0) {
-            if (objectHasProperties(controls)) {
-                if (result[listName].fields === undefined) {
-                    result[listName].fields = {}
+            if (result[listName] === undefined) {
+                result[listName] = {
+                    fields: {}
                 }
-
-                result[listName].fields = $.extend(result[listName].fields, controls)
             }
+
+            result[listName].fields = $.extend(result[listName].fields, controls)
         }
         else {
-            if (objectHasProperties(controls)) {
-                if (result.fields === undefined) {
-                    result.fields = {}
-                }
-
-                result.fields = $.extend(result.fields, controls)
-            }
+            result.fields = $.extend(result.fields, controls)
         }
     }
 
     function containerToJson(container) {
         var containerElements = container.children,
-            result = {}
+            result = {
+                fields: {} // The "fields" property name is fixed, but could be customized later if needed.
+            }
 
         for (var i=0, len=containerElements.length; i<len; i++) {
             var currentElement = containerElements[i],

@@ -1,7 +1,6 @@
 # ===================================
 # Filter Scope Definitions
 # ===================================
-
 scopes:
 
     category:
@@ -32,12 +31,6 @@ scopes:
             - published = '1'
 
     published_date:
-
-        # Filter name
-        label: rainlab.blog::lang.posts.filter_date
-
-        # Filter type
+        label: Date
         type: daterange
-
-        # SQL Conditions
         conditions: created_at >= ':after' AND created_at <= ':before'

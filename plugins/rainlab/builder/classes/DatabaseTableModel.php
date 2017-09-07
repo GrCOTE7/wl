@@ -32,7 +32,7 @@ class DatabaseTableModel extends BaseModel
     ];
 
     protected $validationRules = [
-        'name' => ['required', 'regex:/^[a-z]+[a-z0-9_]+$/', 'tablePrefix', 'uniqueTableName', 'max:64']
+        'name' => ['required', 'regex:/^[a-z]+[a-z0-9_]+$/', 'tablePrefix', 'uniqueTableName']
     ];
 
     /**
@@ -100,8 +100,7 @@ class DatabaseTableModel extends BaseModel
                 'prefix' => $prefix
             ]),
             'name.regex' => Lang::get('rainlab.builder::lang.database.error_table_name_invalid_characters'),
-            'name.unique_table_name' => Lang::get('rainlab.builder::lang.database.error_table_already_exists', ['name'=>$this->name]),
-            'name.max' => Lang::get('rainlab.builder::lang.database.error_table_name_too_long')
+            'name.unique_table_name' => Lang::get('rainlab.builder::lang.database.error_table_already_exists', ['name'=>$this->name])
         ];
 
         Validator::extend('tablePrefix', function($attribute, $value, $parameters) use ($prefix) {
@@ -162,39 +161,14 @@ class DatabaseTableModel extends BaseModel
         return $this->createMigrationObject($migrationCode, sprintf('Drop table %s', $this->name));
     }
 
-    public static function getSchema()
-    {
-        if (!self::$schema) {
-            self::$schema = self::getSchemaManager()->createSchema();
-        }
-
-        return self::$schema;
-    }
-
     protected function validateColumns()
     {
-        $this->validateColumnNameLengths();
         $this->validateDupicateColumns();
         $this->validateDubplicatePrimaryKeys();
         $this->validateAutoIncrementColumns();
         $this->validateColumnsLengthParameter();
         $this->validateUnsignedColumns();
         $this->validateDefaultValues();
-    }
-
-    protected function validateColumnNameLengths()
-    {
-        foreach ($this->columns as $column) {
-            $name = trim($column['name']);
-
-            if (Str::length($name) > 64) {
-                throw new ValidationException([
-                    'columns' => Lang::get('rainlab.builder::lang.database.error_column_name_too_long', 
-                        ['column' => $name]
-                    )
-                ]);
-            }
-        }
     }
 
     protected function validateDupicateColumns()
@@ -349,6 +323,16 @@ class DatabaseTableModel extends BaseModel
         }
 
         return self::$schemaManager;
+    }
+
+    protected static function getSchema()
+    {
+
+        if (!self::$schema) {
+            self::$schema = self::getSchemaManager()->createSchema();
+        }
+
+        return self::$schema;
     }
 
     protected function loadColumnsFromTableInfo()

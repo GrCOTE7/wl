@@ -1,7 +1,7 @@
 title = "Movies"
 url = "/movies"
-layout = "default"
 is_hidden = 0
+layout = "default"
 
 [builderList]
 modelClass = "Watchlearn\Movies\Models\Movie"
@@ -19,7 +19,6 @@ pageNumber = "{{ :page }}"
 {% set detailsKeyColumn = builderList.detailsKeyColumn %}
 {% set detailsUrlParameter = builderList.detailsUrlParameter %}
 
-<div class="container">
 <ul class="record-list">
     {% for record in records %}
         <li>
@@ -58,4 +57,3 @@ pageNumber = "{{ :page }}"
         {% endif %}
     </ul>
 {% endif %}
-</div>

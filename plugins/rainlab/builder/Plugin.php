@@ -45,7 +45,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-wrench',
                 'iconSvg'     => 'plugins/rainlab/builder/assets/images/builder-icon.svg',
                 'permissions' => ['rainlab.builder.manage_plugins'],
-                'order'       => 400,
+                'order'       => 40, 
 
                 'sideMenu' => [
                     'database' => [
@@ -112,7 +112,7 @@ class Plugin extends PluginBase
                 'description' => 'Set your plugins namespace and author name.',
                 'class'       => 'RainLab\Builder\Models\Settings',
                 'permissions' => ['rainlab.builder.manage_plugins'],
-                'order'       => 600
+                'order'       => 60
             ]
         ];
     }

@@ -52,7 +52,7 @@ class PluginBaseModel extends PluginYamlModel
         'homepage' => 'url'
     ];
 
-    public function getIconOptions()
+    public function getIconOptions($keyValue = null)
     {
         return IconList::getList();
     }

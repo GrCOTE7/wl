@@ -4,3 +4,8 @@ plugin:
     author: GrCOTE7
     icon: oc-icon-video-camera
     homepage: ''
+navigation:
+    main-menu-item:
+        label: Films
+        url: grcote7/movies/films
+        icon: icon-video-camera
