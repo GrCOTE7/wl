@@ -20,6 +20,14 @@ notFoundMessage = "Record not found"
 
 {% if record %}
 
+
+<h3>Acteurs</h3>
+
+{% for actor in record.actors %}
+{{ actor.actor_name }} ({{ actor.actor_age }} ans)<br>
+{% endfor %}
+
+
 {% if record.genres|length %}
 <h3>Genres</h3>
 {% for genre in record.genres %}
@@ -59,3 +67,4 @@ notFoundMessage = "Record not found"
 {% else %}
 {{ notFoundMessage }}
 {% endif %}
+

@@ -26,6 +26,8 @@ class Movie extends Model {
    */
   public $table = 'grcote7_movies_films';
 
+  protected $jsonable = ['actors'];
+
   /* Relations */
 
   public $belongsToMany = [
@@ -34,8 +36,6 @@ class Movie extends Model {
       'Grcote7\Movies\Models\Genre',
       'table' => 'grcote7_movies_films_genres',
       'order' => 'genre_title'
-
-
     ]
   ];
 
