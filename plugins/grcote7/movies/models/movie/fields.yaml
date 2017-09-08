@@ -5,7 +5,7 @@ fields:
         span: full
         type: text
     description:
-        label: 'Rich editor'
+        label: 'grcote7.movies::lang.plugin.description'
         size: ''
         oc.commentPosition: ''
         span: full

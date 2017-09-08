@@ -1,7 +1,7 @@
 <?php return [
-  'plugin' => [
-    'name'        => 'Film',
-    'description' => 'Description',
-    'year'        => 'Année'
-  ]
+    'plugin' => [
+        'name' => 'Films',
+        'description' => 'Description',
+        'year' => 'Année',
+    ],
 ];
