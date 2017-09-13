@@ -18,7 +18,7 @@ class ActorBox extends FormWidgetBase {
   public function render() {
 
     $this->prepareVars();
-    //dump($this->vars['selectedValues']);
+    dump($this->vars['selectedValues']);
     return $this->makePartial('widget');
   }
 
@@ -35,6 +35,29 @@ class ActorBox extends FormWidgetBase {
     else {
       $this->vars['selectedValues'] = [];
     }
+  }
+
+
+  public function getSaveValue($actors) {
+
+    $newArray = [];
+
+    foreach ($actors as $actorID) {
+      if (!is_numeric($actorID)) {
+        $newActor     = new Actor;
+        $nameLastname = explode(' ', $actorID);
+
+        $newActor->name     = ucfirst($nameLastname[0]);
+        $newActor->lastname = ucfirst($nameLastname[1]);
+        $newActor->save();
+        $newArray[] = $newActor->id;
+      }
+      else {
+        $newArray[] = $actorID;
+      }
+    }
+
+    return $newArray;
   }
 
 
