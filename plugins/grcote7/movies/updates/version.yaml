@@ -21,3 +21,36 @@
 1.0.8:
     - 'Updated table grcote7_movies_films'
     - builder_table_update_grcote7_movies_films_4.php
+1.0.9:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_5.php
+1.0.10:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_6.php
+1.0.11:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_7.php
+1.0.12:
+    - 'Created table grcote7_movies_actors'
+    - builder_table_create_grcote7_movies_actors.php
+1.0.13:
+    - 'Updated table grcote7_movies_actors'
+    - builder_table_update_grcote7_movies_actors.php
+1.0.14:
+    - 'Updated table grcote7_movies_actors'
+    - builder_table_update_grcote7_movies_actors_2.php
+1.0.15:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_8.php
+1.0.16:
+    - 'Created table grcote7_movies_films_actors'
+    - builder_table_create_grcote7_movies_films_actors.php
+1.0.17:
+    - 'Updated table grcote7_movies_films_actors'
+    - builder_table_update_grcote7_movies_films_actors.php
+1.0.18:
+    - 'Updated table grcote7_movies_films_actors'
+    - builder_table_update_grcote7_movies_films_actors_2.php
+1.0.19:
+    - 'Updated table grcote7_movies_films_actors'
+    - builder_table_update_grcote7_movies_films_actors_3.php

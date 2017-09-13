@@ -1,0 +1,14 @@
+tabs:
+    fields:
+        name:
+            label: Prénom
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        lastname:
+            label: Nom
+            oc.commentPosition: ''
+            span: auto
+            type: text
+            tab: 'Tab 1'

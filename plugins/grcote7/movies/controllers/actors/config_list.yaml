@@ -1,0 +1,11 @@
+title: Actors
+modelClass: Grcote7\Movies\Models\Actor
+list: $/grcote7/movies/models/actor/columns.yaml
+recordUrl: 'grcote7/movies/actors/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

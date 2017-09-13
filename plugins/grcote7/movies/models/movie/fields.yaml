@@ -1,6 +1,10 @@
 fields:
+    actors:
+        label: Acteurs principaux
+        span: left
+        type: actorbox
     name:
-        label: 'Movie title'
+        label: Titre
         oc.commentPosition: ''
         span: full
         type: text
@@ -54,8 +58,8 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-    actors:
-        label: Acteurs
+    other_actors:
+        label: 'Autres acteurs'
         oc.commentPosition: ''
         prompt: 'Add new item'
         span: auto
@@ -63,12 +67,12 @@ fields:
         form:
             fields:
                 actor_name:
-                    label: Text
+                    label: Nom
                     oc.commentPosition: ''
                     span: auto
                     type: text
                 actor_age:
-                    label: Text
+                    label: Âge
                     oc.commentPosition: ''
                     span: auto
                     type: text
