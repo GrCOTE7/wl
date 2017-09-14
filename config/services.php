@@ -15,23 +15,36 @@ return [
     */
 
     'mailgun' => [
-        'domain' => '',
-        'secret' => '',
+      'domain' => '',
+      'secret' => '',
     ],
 
     'mandrill' => [
-        'secret' => '',
+      'secret' => '',
     ],
 
     'ses' => [
-        'key' => '',
-        'secret' => '',
-        'region' => 'us-east-1',
+      'key'    => '',
+      'secret' => '',
+      'region' => 'us-east-1',
     ],
 
     'stripe' => [
-        'model'  => 'User',
-        'secret' => '',
+      'model'  => 'User',
+      'secret' => '',
     ],
 
+];
+
+return ["driver"   => "smtp",
+        "host"     => "smtp.mailtrap.io",
+        "port"     => 2525,
+        "from"     => [
+          "address" => "from@example.com",
+          "name"    => "Example"
+        ],
+        "username" => "ad8c19aa66baf2",
+        "password" => "a05cdad3c9114a",
+        "sendmail" => "/usr/sbin/sendmail -bs",
+        "pretend"  => false
 ];
