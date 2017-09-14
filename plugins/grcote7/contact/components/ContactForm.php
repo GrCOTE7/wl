@@ -18,8 +18,8 @@ class ContactForm extends ComponentBase {
 
   public function onSend() {
 
-    mail('test', 'a', 'b');
-    /*
+    //mail('grcote7@gmail.com', 'a', 'b');
+    
         $vars = [
           'name'    => Input::get('name'),
           'email'   => Input::get('email'),
@@ -31,7 +31,7 @@ class ContactForm extends ComponentBase {
           $message->to('grcote7@gmail.com', 'Lionel COTE');
           $message->subject('New message from contact form');
         });
-    */
+    
     /*
         return redirect()
           ->back()
