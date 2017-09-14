@@ -15,7 +15,7 @@ return [
   |
   */
 
-  'driver' => 'mail',
+  'driver' => env('MAIL_DRIVER', 'mail'),
 
   /*
   |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
   |
   */
 
-  'host' => 'smtp.mailgun.org',
+  'host' => env('MAIL_HOST', 'smtp.gmail.com'),
 
   /*
   |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
   |
   */
 
-  'port' => 587,
+  'port' => env('MAIL_PORT', 587),
 
   /*
   |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
   |
   */
 
-  'encryption' => 'tls',
+  'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
   /*
   |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
   |
   */
 
-  'username' => null,
+  'username' => env('MAIL_USERNAME', 'grcote7@gmail.com'),
 
   /*
   |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
   |
   */
 
-  'password' => null,
+  'password' => env('MAIL_PASSWORD', 'AdelC014529'),
 
   /*
   |--------------------------------------------------------------------------
@@ -109,7 +109,10 @@ return [
   |
   */
 
-  'sendmail' => '/usr/sbin/sendmail -bs',
+    'sendmail' => '/usr/sbin/sendmail -bs',
+//  'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe -t -i',
+  //'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe',
+//  'sendmail' => 'C:/usr/lib/sendmail.exe -t -i',
 
   /*
   |--------------------------------------------------------------------------
@@ -125,18 +128,3 @@ return [
   'pretend' => false,
 
 ];
-/*
-return [
-  "driver" => "smtp",
-  "host" => "smtp.mailtrap.io",
-  "port" => 2525,
-  "from" => [
-    "address" => "from@example.com",
-    "name"    => "Example"
-  ],
-  "username" => "ad8c19aa66baf2",
-  "password" => "a05cdad3c9114a",
-  "sendmail" => "/usr/sbin/sendmail -bs",
-  "pretend" => false
-];
-*/

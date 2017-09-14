@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Grcote7\Movies\Models\Actor;
+use Mail;
 
 class Actors extends ComponentBase {
 
@@ -49,11 +50,27 @@ class Actors extends ComponentBase {
 
   public function onRun() {
 
+    //mail('grcote7@gmail.com', 'a', 'b');
     $this->actors = $this->loadActors();
   }
 
 
   protected function loadActors() {
+
+    //dump(mail('grcote7@gmail.com','Sujet', 'Msg'));
+
+    $vars = [
+      'name'    => 'Lionel',
+      'email'   => 'ddd@com.com',
+      'content' => 'Mon message'
+    ];
+
+    Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
+
+      $message->to('grcote7@gmail.com', 'Lionel COTE');
+      $message->subject('New message from contact form');
+    });
+
 
     $query = Actor::all();
 
