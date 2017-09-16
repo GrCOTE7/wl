@@ -2,7 +2,11 @@
 
 use Cms\Classes\ComponentBase;
 use Grcote7\Movies\Models\Actor;
-use Mail;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Mail;
+use Swift_Message;
+use Swift_RfcComplianceException;
+
 
 class Actors extends ComponentBase {
 
@@ -50,27 +54,58 @@ class Actors extends ComponentBase {
 
   public function onRun() {
 
-    //mail('grcote7@gmail.com', 'a', 'b');
+    // mail('test', 'a', 'b');
     $this->actors = $this->loadActors();
   }
 
 
   protected function loadActors() {
 
-    //dump(mail('grcote7@gmail.com','Sujet', 'Msg'));
+    // $headers = 'From: grcote7@gmail.com' . "\r\n" . 'Reply-To: grcote7@gmail.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+    //dump(mail('grcote7@gmail.com', 'Sujet', 'Msg', $headers));
 
     $vars = [
       'name'    => 'Lionel',
       'email'   => 'ddd@com.com',
-      'content' => 'Mon message'
+      'content' => 'Mon message (Issu de page d\'accueil'
     ];
+    //dump($_SERVER['MAIL_HOST']); // => "http://wl"
+    //    dump($this.theme.getConfigValue('name') );
+    //    dump($_SERVER['APP_DRIVER']);
+    //    dump(Config::getenv('MAIL_DRIVER'));
 
+
+    $message = Swift_Message::newInstance();
+
+    // add some message composing here...
+
+    $email = "lio181@yahoo.fr";
+    $err01 = 0;
+    try {
+      $message->setTo([$email]);
+    } catch (Swift_RfcComplianceException $e) {
+      $err01 = 1;
+      dump("Address " . $email . " seems invalid");
+    }
+    if (!$err01) {
+      dump("Address " . $email . " seems VALID");
+    }
+    /* and now your transport... */
+    /*
+        try {
+          $result = $mailer->send($message);
+        } catch (\Swift_TransportException $Ste) {
+          echo "EROORRRRRRRRRRRRRRRRRRRR\n\n\n";
+        }
+    */
+
+    if (0) {
     Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
       $message->to('grcote7@gmail.com', 'Lionel COTE');
       $message->subject('New message from contact form');
     });
-
+    }
 
     $query = Actor::all();
 

@@ -38,10 +38,10 @@ return [
   | This is the SMTP port used by your application to deliver e-mails to
   | users of the application. Like the host we have set this value to
   | stay compatible with the Mailgun e-mail application by default.
-  |
+  | 587
   */
 
-  'port' => env('MAIL_PORT', 587),
+  'port' => env('MAIL_PORT', 465),
 
   /*
   |--------------------------------------------------------------------------
@@ -55,8 +55,8 @@ return [
   */
 
   'from' => [
-    'address' => 'noreply@domain.tld',
-    'name'    => 'OctoberCMS'
+    'address' => 'grcote7@gmail.com',
+    'name'    => 'Lionel COTE'
   ],
 
   /*
@@ -109,9 +109,9 @@ return [
   |
   */
 
-    'sendmail' => '/usr/sbin/sendmail -bs',
+  // 'sendmail' => '/usr/sbin/sendmail -bs',
 //  'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe -t -i',
-  //'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe',
+  'sendmail' => 'C:/sendmail/sendmail.exe',
 //  'sendmail' => 'C:/usr/lib/sendmail.exe -t -i',
 
   /*
