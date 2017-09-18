@@ -96,18 +96,18 @@ class Actors extends ComponentBase {
     /* and now your transport... */
     $transport = Swift_MailTransport::newInstance();
     $mailer    = \Swift_Mailer::newInstance($transport);
-
-    try {
+    /*
+        try {
           $result = $mailer->send($message);
         } catch (\Swift_TransportException $Ste) {
           echo "EROORRRRRRRRRRRRRRRRRRRR\n\n\n";
         }
+    */
 
-
-    $typeEnvoi = 0;
+    $typeEnvoi = 2;
     dump('Type d\'envoi = ' . $typeEnvoi);
 
-    if ($typeEnvoi==1) { // Ok sous linux
+    if ($typeEnvoi == 1) { // Ok sous linux
       Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
         $message->to('grcote7@gmail.com', 'Lionel COTE');
@@ -115,61 +115,15 @@ class Actors extends ComponentBase {
       });
     }
 
-    if ($typeEnvoi==2) {
+    if ($typeEnvoi == 2) {
       $transport = Swift_MailTransport::newInstance();
       $mailer    = \Swift_Mailer::newInstance($transport);
-      //      dump($mailer);
-
-      $message = (new \Swift_Message('Hello Email - Type 2'))->setFrom('grcote7@gmail.com')
-                                                    ->setTo('grcote7@gmail.com')
-                                                    ->setBody('My body');
-      //                                                              'text/html')
-      /*
-         * If you also want to include a plaintext version of the message
-        ->addPart(
-            $this->renderView(
-                'Emails/registration.txt.twig',
-                array('name' => $name)
-            ),
-            'text/plain'
-        )
-        */;
-      //      dump($message);
-      $mailer->send($message);
-      /*
-
-            Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
-
-              $message->to('grcote7@gmail.com', 'Lionel COTE');
-              $message->subject('New message from contact form');
-            });
-      */
+      $message   = (new \Swift_Message('Hello Email  - Type 2'))->setFrom('grcote7@gmail.com')
+                                                                ->setTo('grcote7@gmail.com')
+                                                                ->setBody('Mon message émis depuis le script');
+      dump($mailer->send($message));
     }
 
-
-    if ($typeEnvoi==3) {
-      $transport = Swift_MailTransport::newInstance();
-      $mailer    = \Swift_Mailer::newInstance($transport);
-      $message   = (new \Swift_Message('Hello Email  - Type 3'))->setFrom('grcote7@gmail.com')
-                                                         ->setTo('grcote7@gmail.com')
-                                                         ->setBody('Mon message émis depuis le script');
-      $mailer->send($message);
-    }
-    if ($typeEnvoi==4) {
-
-
-      $transport = Swift_MailTransport::newInstance();
-//            $transport = Swift_SendmailTransport::newInstance();
-      $mailer = \Swift_Mailer::newInstance($transport);
-
-      $message = \Swift_Message::newInstance();
-      $message->setSubject('Email From Our Website - Type 4')
-              ->setTo(['grcote7@gmail.com'])
-              ->setBody('Oki');
-
-      $result = $mailer->send($message);
-      dump($result);
-    }
 
     $query = Actor::all();
 
