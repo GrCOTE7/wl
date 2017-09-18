@@ -20,23 +20,18 @@ class ContactForm extends ComponentBase {
 
     //mail('grcote7@gmail.com', 'a', 'b');
     
-        $vars = [
-          'name'    => Input::get('name'),
-          'email'   => Input::get('email'),
-          'content' => Input::get('content')
-        ];
+    $vars = [
+      'name'    => Input::get('name'),
+      'email'   => Input::get('email'),
+      'content' => Input::get('content')
+    ];
 
-        Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
+    Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
 
-          $message->to('grcote7@gmail.com', 'Lionel COTE');
-          $message->subject('New message from contact form');
-        });
-    
-    /*
-        return redirect()
-          ->back()
-          ->with('success', 'Done');
-      */
+      $message->to('grcote7@gmail.com', 'Lionel COTE');
+      $message->subject('New message from contact form');
+    });
+
   }
 
 }

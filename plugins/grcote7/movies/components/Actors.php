@@ -67,7 +67,7 @@ class Actors extends ComponentBase {
     $vars = [
       'name'    => 'Lionel',
       'email'   => 'ddd@com.com',
-      'content' => 'Mon message (Issu de page d\'accueil'
+      'content' => 'Mon message (Issu de page d\'accueil)'
     ];
     //dump($_SERVER['MAIL_HOST']); // => "http://wl"
     //    dump($this.theme.getConfigValue('name') );
@@ -99,11 +99,11 @@ class Actors extends ComponentBase {
         }
     */
 
-    if (0) {
+    if (1) {
     Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
       $message->to('grcote7@gmail.com', 'Lionel COTE');
-      $message->subject('New message from contact form');
+      $message->subject('New message from page d\'accueil');
     });
     }
 
