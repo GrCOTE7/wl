@@ -11,8 +11,10 @@
                     <a
                             href="{{ 'films'|page }}">Films</a>
                 </li>
+                <li class="{% if this.page.id == 'contact' %} active {% endif %}"><a
+                        href="{{ 'contact'|page }}">Contact</a>
+                </li>
             </ul>
         </nav>
     </div>
-
 </header>
