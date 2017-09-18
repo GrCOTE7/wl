@@ -99,7 +99,7 @@ class Actors extends ComponentBase {
         }
     */
 
-    if (1) {
+    if (0) {
     Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
       $message->to('grcote7@gmail.com', 'Lionel COTE');

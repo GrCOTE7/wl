@@ -110,8 +110,8 @@ return [
   */
 
   // 'sendmail' => '/usr/sbin/sendmail -bs',
-  //  'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe -t -i',
-  'sendmail' => 'C:/sendmail/sendmail.exe',
+  'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe -t -i',
+  // 'sendmail' => 'C:/sendmail/sendmail.exe',
   //  'sendmail' => 'C:/usr/lib/sendmail.exe -t -i',
 
   /*
