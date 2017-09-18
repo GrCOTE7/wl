@@ -29,7 +29,7 @@ class ContactForm extends ComponentBase {
     Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
 
       $message->to('grcote7@gmail.com', 'Lionel COTE');
-      $message->subject('New message from contact form');
+      $message->subject('New message from contact form.');
     });
 
   }
