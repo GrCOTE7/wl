@@ -2,10 +2,13 @@
 
 use Cms\Classes\ComponentBase;
 use Grcote7\Movies\Models\Actor;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Mail;
+use Swift_MailTransport;
 use Swift_Message;
 use Swift_RfcComplianceException;
+use Swift_SendmailTransport;
+use Swift_SmtpTransport;
+use Swift_Transport;
 
 
 class Actors extends ComponentBase {
@@ -91,15 +94,17 @@ class Actors extends ComponentBase {
       dump("Address " . $email . " seems VALID");
     }
     /* and now your transport... */
-    /*
-        try {
+    $transport = Swift_MailTransport::newInstance();
+    $mailer    = \Swift_Mailer::newInstance($transport);
+
+    try {
           $result = $mailer->send($message);
         } catch (\Swift_TransportException $Ste) {
           echo "EROORRRRRRRRRRRRRRRRRRRR\n\n\n";
         }
-    */
 
-    if (0) {
+
+    if (0) { // Ok sous linux
       Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
         $message->to('grcote7@gmail.com', 'Lionel COTE');
@@ -108,7 +113,7 @@ class Actors extends ComponentBase {
     }
 
     if (0) {
-      $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465);
+      $transport = Swift_MailTransport::newInstance();
       $mailer    = \Swift_Mailer::newInstance($transport);
       //      dump($mailer);
 
@@ -151,7 +156,7 @@ class Actors extends ComponentBase {
 
 
       $transport = Swift_MailTransport::newInstance();
-      //      $transport = Swift_SendmailTransport::newInstance();
+//            $transport = Swift_SendmailTransport::newInstance();
       $mailer = \Swift_Mailer::newInstance($transport);
 
       $message = \Swift_Message::newInstance();
@@ -162,7 +167,7 @@ class Actors extends ComponentBase {
       $result = $mailer->send($message);
       dump($result);
     }
-    
+
     $query = Actor::all();
 
     if ($this->property('sortOrder') == 'lastname asc') {
