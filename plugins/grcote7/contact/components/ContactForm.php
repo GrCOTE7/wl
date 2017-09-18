@@ -1,9 +1,11 @@
 <?php namespace Grcote7\Contact\Components;
 
 
+use Mail;
+use Input;
+use Redirect;
+use Validator;
 use Cms\Classes\ComponentBase;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Input;
 
 class ContactForm extends ComponentBase {
 
@@ -16,22 +18,37 @@ class ContactForm extends ComponentBase {
   }
 
 
+  public function Rule() {
+  }
+
+
   public function onSend() {
 
-    //mail('grcote7@gmail.com', 'a', 'b');
-    
-    $vars = [
-      'name'    => Input::get('name'),
-      'email'   => Input::get('email'),
-      'content' => Input::get('content')
-    ];
+    $validator = Validator::make([
+                                   'name'  => Input::get('name'),
+                                   'email' => Input::get('email')
+                                 ], [
+                                   'name'  => 'required|min:3',
+                                   'email' => 'required|email'
+                                 ]);
 
-    Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
+    if ($validator->fails()) {
+      return Redirect::back()
+                     ->withErrors($validator);
+    }
+    else {
+      $vars = [
+        'name'    => Input::get('name'),
+        'email'   => Input::get('email'),
+        'content' => Input::get('content')
+      ];
 
-      $message->to('grcote7@gmail.com', 'Lionel COTE');
-      $message->subject('New message from contact form.');
-    });
+      Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
 
+        $message->to('grcote7@gmail.com', 'Lionel COTE');
+        $message->subject('New message from my contact form.');
+      });
+    }
   }
 
 }
