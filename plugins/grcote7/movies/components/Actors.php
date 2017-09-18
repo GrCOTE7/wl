@@ -100,13 +100,69 @@ class Actors extends ComponentBase {
     */
 
     if (0) {
-    Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
+      Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
 
-      $message->to('grcote7@gmail.com', 'Lionel COTE');
-      $message->subject('New message from page d\'accueil');
-    });
+        $message->to('grcote7@gmail.com', 'Lionel COTE');
+        $message->subject('New message from page d\'accueil');
+      });
     }
 
+    if (0) {
+      $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465);
+      $mailer    = \Swift_Mailer::newInstance($transport);
+      //      dump($mailer);
+
+      $message = (new \Swift_Message('Hello Email'))->setFrom('grcote7@gmail.com')
+                                                    ->setTo('grcote7@gmail.com')
+                                                    ->setBody('My body');
+      //                                                              'text/html')
+      /*
+         * If you also want to include a plaintext version of the message
+        ->addPart(
+            $this->renderView(
+                'Emails/registration.txt.twig',
+                array('name' => $name)
+            ),
+            'text/plain'
+        )
+        */;
+      //      dump($message);
+      $mailer->send($message);
+      /*
+
+            Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
+
+              $message->to('grcote7@gmail.com', 'Lionel COTE');
+              $message->subject('New message from contact form');
+            });
+      */
+    }
+
+
+    if (0) {
+      $transport = Swift_MailTransport::newInstance();
+      $mailer    = \Swift_Mailer::newInstance($transport);
+      $message   = (new \Swift_Message('Hello Email OK'))->setFrom('grcote7@gmail.com')
+                                                         ->setTo('grcote7@gmail.com')
+                                                         ->setBody('Mon message émis depuis le script');
+      $mailer->send($message);
+    }
+    if (0) {
+
+
+      $transport = Swift_MailTransport::newInstance();
+      //      $transport = Swift_SendmailTransport::newInstance();
+      $mailer = \Swift_Mailer::newInstance($transport);
+
+      $message = \Swift_Message::newInstance();
+      $message->setSubject('Email From Our Website')
+              ->setTo(['grcote7@gmail.com'])
+              ->setBody('Oki');
+
+      $result = $mailer->send($message);
+      dump($result);
+    }
+    
     $query = Actor::all();
 
     if ($this->property('sortOrder') == 'lastname asc') {
