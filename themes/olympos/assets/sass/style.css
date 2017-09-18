@@ -255,6 +255,10 @@ form {
 .clr {
   content: "test"; }
 
+.red {
+  color: red;
+  font-weight: bold; }
+
 .main-header {
   background: #333; }
   .main-header h1 {

@@ -104,7 +104,7 @@ class Actors extends ComponentBase {
         }
     */
 
-    $typeEnvoi = 2;
+    $typeEnvoi = 0;
     dump('Type d\'envoi = ' . $typeEnvoi);
 
     if ($typeEnvoi == 1) { // Ok sous linux
