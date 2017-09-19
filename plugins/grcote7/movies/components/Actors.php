@@ -3,6 +3,7 @@
 use Cms\Classes\ComponentBase;
 use Grcote7\Movies\Models\Actor;
 use Illuminate\Support\Facades\Mail;
+use RainLab\User\Models\User;
 use Swift_MailTransport;
 use Swift_Message;
 use Swift_RfcComplianceException;
@@ -64,6 +65,9 @@ class Actors extends ComponentBase {
 
   protected function loadActors() {
 
+//    $user = User::validated();
+//    dump($user);
+
     // $headers = 'From: grcote7@gmail.com' . "\r\n" . 'Reply-To: grcote7@gmail.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
     //dump(mail('grcote7@gmail.com', 'Sujet', 'Msg', $headers));
 
@@ -91,7 +95,7 @@ class Actors extends ComponentBase {
       dump("Address " . $email . " seems invalid");
     }
     if (!$err01) {
-      dump("Address " . $email . " seems VALID");
+      //      dump("Address " . $email . " seems VALID");
     }
     /* and now your transport... */
     $transport = Swift_MailTransport::newInstance();
@@ -105,7 +109,7 @@ class Actors extends ComponentBase {
     */
 
     $typeEnvoi = 0;
-    dump('Type d\'envoi = ' . $typeEnvoi);
+    //    dump('Type d\'envoi = ' . $typeEnvoi);
 
     if ($typeEnvoi == 1) { // Ok sous linux
       Mail::send('grcote7.movies::mail.message', $vars, function ($message) {
