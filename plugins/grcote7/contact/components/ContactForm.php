@@ -25,11 +25,13 @@ class ContactForm extends ComponentBase {
   public function onSend() {
 
     $validator = Validator::make([
-                                   'name'  => Input::get('name'),
-                                   'email' => Input::get('email')
+                                   'name'    => Input::get('name'),
+                                   'email'   => Input::get('email'),
+                                   'message' => Input::get('content')
                                  ], [
-                                   'name'  => 'required|min:3',
-                                   'email' => 'required|email'
+                                   'name'    => 'required|min:3',
+                                   'email'   => 'required|email',
+                                   'message' => 'required|min:3'
                                  ]);
 
     if ($validator->fails()) {
