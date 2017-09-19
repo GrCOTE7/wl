@@ -21,11 +21,10 @@ class ContactForm extends ComponentBase {
   public function onSend() {
     
     
-
     $validator = Validator::make([
                                    'name'    => Input::get('name'),
                                    'email'   => Input::get('email'),
-                                   'message' => Input::get('content')
+                                   'message' => Input::get('message')
                                  ], [
                                    'name'    => 'required|min:3',
                                    'email'   => 'required|email',
@@ -37,10 +36,9 @@ class ContactForm extends ComponentBase {
 
       return [
         '#result' => $this->renderPartial('contactform::messages', [
-                                                                   'errorMsgs' => $validator->messages()
-                                                                                            ->all(),
-                                                                   'fieldMsgs' => $validator->messages()
-                                                                 ])
+          //          'errorMsgs' => $validator->messages()->all(),
+          'fieldMsgs' => $validator->messages()
+        ])
       ];
     }
     else {
