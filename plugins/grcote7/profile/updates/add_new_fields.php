@@ -15,16 +15,22 @@ class AddNewFields extends Migration {
             ->nullable();
     });
   }
-
+  
 
   public function down() {
 
     Schema::table('users', function ($table) {
 
-      $table->dropColumn([
-                           'facebook',
-                           'bio'
-                         ]);
+      if (Schema::hasColumn('facebook', 'bio')) {
+        $table->dropColumn([
+                             'facebook',
+                             'bio'
+                           ]);
+      }
     });
   }
+
 }
+// php artisan plugin:refresh grcote7.profile
+// Commenter la fonction dans la méthode up() pour supprimer définitivement les modifs dans la table
+// php artisan cache:clear (à faire avant chaque manipe suivante)
