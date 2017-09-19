@@ -1,0 +1,23 @@
+<div class="container">
+
+    <form data-request="onSave">
+
+        {% flash success %}
+
+        <p>{{ message }}
+        <hr>
+        </p>
+
+        {% endflash %}
+
+        <label>Actor name</label>
+        <input type="text" name="name" value="John">
+
+        <label>Actor last name</label>
+        <input type="text" name="lastname" value="Wayne">
+
+        <button type="submit">Save actor</button>
+
+    </form>
+
+</div>

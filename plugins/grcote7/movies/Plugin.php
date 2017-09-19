@@ -7,7 +7,8 @@ class Plugin extends PluginBase {
   public function registerComponents() {
 
     return [
-      'Grcote7\Movies\Components\Actors' => 'actors'
+      'Grcote7\Movies\Components\Actors'    => 'actors',
+      'Grcote7\Movies\Components\ActorForm' => 'actorform'
     ];
   }
 

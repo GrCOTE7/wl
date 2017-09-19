@@ -18,10 +18,6 @@ class ContactForm extends ComponentBase {
   }
 
 
-  public function Rule() {
-  }
-
-
   public function onSend() {
 
     $validator = Validator::make([
