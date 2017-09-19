@@ -1,36 +1,36 @@
 <div class="container">
 
-    <form data-request="onSend">
+    <form data-request="contactform::onSend">
 
         <!--<div class="alert-error">-->
         <!--<ul>-->
         <!--{% for error in errors.all() %}-->
-
         <!--<li>{{ error }}</li>-->
-
         <!--{% endfor %}-->
         <!--</ul>-->
         <!--</div>-->
 
-        <label for="name">Your name</label>
-        <span class="red">
-            {{ errors.first('name') }}
-        </span>
+        <div id="result"></div>
 
-        <input type="text" name="name" value="Lionel">
+        <label for="name">Your name</label>
+        <!--<span class="red">-->
+        <!--{{ errors.first('name') }}-->
+        <!--</span>-->
+
+        <input type="text" name="name" value="Li">
 
         <label for="email">Your email</label>
-        <span class="red">
-            {{ errors.first('email') }}
-        </span>
+        <!--<span class="red">-->
+        <!--{{ errors.first('email') }}-->
+        <!--</span>-->
 
         <input type="email" name="email" value="GrCOTE7@GMail.com">
 
         <label>Your message</label>
-        <span class="red">
-            {{ errors.first('message') }}
-        </span>
-        <textarea name="content">Mon message.</textarea>
+        <!--<span class="red">-->
+            <!--{{ errors.first('message') }}-->
+        <!--</span>-->
+        <textarea name="message">Mon message.</textarea>
 
         <button type="submit">Send</button>
 

@@ -19,6 +19,8 @@ class ContactForm extends ComponentBase {
 
 
   public function onSend() {
+    
+    
 
     $validator = Validator::make([
                                    'name'    => Input::get('name'),
@@ -27,12 +29,19 @@ class ContactForm extends ComponentBase {
                                  ], [
                                    'name'    => 'required|min:3',
                                    'email'   => 'required|email',
-                                   'message' => 'required|min:3'
+                                   'message' => 'required|min:5'
                                  ]);
 
     if ($validator->fails()) {
-      return Redirect::back()
-                     ->withErrors($validator);
+      // return Redirect::back()->withErrors($validator);
+
+      return [
+        '#result' => $this->renderPartial('contactform::messages', [
+                                                                   'errorMsgs' => $validator->messages()
+                                                                                            ->all(),
+                                                                   'fieldMsgs' => $validator->messages()
+                                                                 ])
+      ];
     }
     else {
       $vars = [
