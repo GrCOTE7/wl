@@ -1,6 +1,8 @@
 <?php namespace Grcote7\Profile;
-// 123123
+
+  // 123123
 // $2y$10$06ZVAqSvyWqtEQ6X5VuOFuNnKpLKvSZUlEdzSMYCSS1f1Hl8zCAV.
+
 use System\Classes\PluginBase;
 use RainLab\User\Models\User as UserModel;
 use RainLab\User\Controllers\Users as UsersController;
