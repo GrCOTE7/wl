@@ -7,6 +7,7 @@ use System\Classes\PluginBase;
 use RainLab\User\Models\User as UserModel;
 use RainLab\User\Controllers\Users as UsersController;
 
+
 class Plugin extends PluginBase {
 
   public function registerComponents() {
