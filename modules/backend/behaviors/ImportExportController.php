@@ -8,6 +8,7 @@ use Backend;
 use BackendAuth;
 use Backend\Classes\ControllerBehavior;
 use Backend\Behaviors\ImportExportController\TranscodeFilter;
+use Illuminate\Database\Eloquent\MassAssignmentException;
 use League\Csv\Reader as CsvReader;
 use League\Csv\Writer as CsvWriter;
 use ApplicationException;
@@ -189,6 +190,12 @@ class ImportExportController extends ControllerBehavior
             $this->vars['importResults'] = $model->getResultStats();
             $this->vars['returnUrl'] = $this->getRedirectUrlForType('import');
         }
+        catch (MassAssignmentException $ex) {
+            $this->controller->handleError(new ApplicationException(Lang::get(
+                'backend::lang.model.mass_assignment_failed',
+                ['attribute' => $ex->getMessage()]
+            )));
+        }
         catch (Exception $ex) {
             $this->controller->handleError($ex);
         }
@@ -266,7 +273,7 @@ class ImportExportController extends ControllerBehavior
 
     public function importRender()
     {
-        return $this->importExportMakePartial('import');
+        return $this->importExportMakePartial('container_import');
     }
 
     public function importGetModel()
@@ -411,6 +418,12 @@ class ImportExportController extends ControllerBehavior
             $this->vars['fileUrl'] = $fileUrl;
             $this->vars['returnUrl'] = $this->getRedirectUrlForType('export');
         }
+        catch (MassAssignmentException $ex) {
+            $this->controller->handleError(new ApplicationException(Lang::get(
+                'backend::lang.model.mass_assignment_failed',
+                ['attribute' => $ex->getMessage()]
+            )));
+        }
         catch (Exception $ex) {
             $this->controller->handleError($ex);
         }
@@ -443,7 +456,7 @@ class ImportExportController extends ControllerBehavior
 
     public function exportRender()
     {
-        return $this->importExportMakePartial('export');
+        return $this->importExportMakePartial('container_export');
     }
 
     public function exportGetModel()
@@ -525,12 +538,19 @@ class ImportExportController extends ControllerBehavior
 
     protected function checkUseListExportMode()
     {
-        if (!$listDefinition = $this->getConfig('export[useList]')) {
+        if (!$useList = $this->getConfig('export[useList]')) {
             return false;
         }
 
         if (!$this->controller->isClassExtendedWith('Backend.Behaviors.ListController')) {
             throw new ApplicationException(Lang::get('backend::lang.import_export.behavior_missing_uselist_error'));
+        }
+
+        if (is_array($useList)) {
+            $listDefinition = array_get($useList, 'definition');
+        }
+        else {
+            $listDefinition = $useList;
         }
 
         $this->exportFromList($listDefinition);
@@ -581,12 +601,20 @@ class ImportExportController extends ControllerBehavior
         /*
          * Add records
          */
+        $getter = $this->getConfig('export[useList][raw]', false)
+            ? 'getColumnValueRaw'
+            : 'getColumnValue';
+
         $model = $widget->prepareModel();
         $results = $model->get();
         foreach ($results as $result) {
             $record = [];
             foreach ($columns as $column) {
-                $record[] = $widget->getColumnValue($result, $column);
+                $value = $widget->$getter($result, $column);
+                if (is_array($value)) {
+                    $value = implode('|', $value);
+                }
+                $record[] = $value;
             }
             $csv->insertOne($record);
         }
