@@ -1,23 +1,25 @@
-<div class="container">
+<form data-request="contactform::onSend" data-request-validate data-request-flash>
 
-    <form data-request="onDoSomething"
-          data-request-validate
-          data-request-flash>
+    <label>Your name</label>
+    <div>
+        <input name="name" value="Li"/>
+        <span data-validate-for="name">Your name is required !!!</span>
+    </div>
 
-        <label for="name">Your name</label>
-        <div>
-            <input name="name" value="Li"/>
-            <span data-validate-for="name"></span>
-        </div>
+    <label for="email">Your email</label>
+    <input type="email" name="email" value="GrCOTE7@GMail.com">
+    <span data-validate-for="email">Your name is required !!!</span>
 
-        <label for="email">Your email</label>
-        <input type="email" name="email" value="GrCOTE7@GMail.com">
+    <label>Your message</label>
+    <textarea name="message">Mon message.</textarea>
+    <span data-validate-for="message"></span>
 
-        <label>Your message</label>
-        <textarea name="message">Mon message.</textarea>
+    <button data-attach-loading type="submit">Send</button>
 
-        <button type="submit">Send</button>
 
-    </form>
+    <div class="alert alert-danger" data-validate-error>
+        <p data-message></p>
+    </div>
 
-</div>
+
+</form>

@@ -3,12 +3,19 @@ url = "/contact"
 layout = "default"
 is_hidden = 0
 
-[contactform]
+[Grcote7\Contact\Components\ContactForm contactform]
 ==
 <h2>Contact Page</h2>
 
 <div class="container">
+    {% flash %}
+    <p
+            data-control="flash-message"
+            class="flash-message fade {{ type }}"
+            data-interval="5">
+        {{ message }}
+    </p>
+    {% endflash %}
 
     {% component 'contactform' %}
-    
 </div>

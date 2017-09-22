@@ -1,13 +1,11 @@
-<?php namespace Grcote7\Contact\Components;
+<?php namespace Watchlearn\Contact\Components;
 
-
-use Mail;
-use Input;
-use ValidationException;
-use Redirect;
-use Validator;
 use Cms\Classes\ComponentBase;
-
+use Input;
+use Mail;
+use Validator;
+use Redirect;
+use ValidationException;
 
 class ContactForm extends ComponentBase {
 
@@ -22,13 +20,11 @@ class ContactForm extends ComponentBase {
 
   public function onSend() {
 
-
     $data = post();
 
     $rules = [
-      'name'    => 'required|min:3',
-      'email'   => 'required|email',
-      'message' => 'required|min:5'
+      'name'  => 'required|min:4',
+      'email' => 'required|email'
     ];
 
     $validator = Validator::make($data, $rules);
@@ -42,16 +38,14 @@ class ContactForm extends ComponentBase {
         'email'   => Input::get('email'),
         'content' => Input::get('content')
       ];
-      Flash::success('Jobs done!');
-
-      // Envoi de l'email en réel
       /*
-      Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
+                  Mail::send('watchlearn.contact::mail.message', $vars, function($message) {
 
-        $message->to('grcote7@gmail.com', 'Lionel COTE');
-        $message->subject('New message from my contact form.');
-      });
-      */
+                      $message->to('youremail@gmail.com', 'Admin Person');
+                      $message->subject('New message from contact form');
+
+                  });
+              */
     }
   }
 
