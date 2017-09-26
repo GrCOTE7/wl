@@ -1,4 +1,8 @@
 columns:
+    id:
+        label: Id
+        type: number
+        sortable: true
     name:
         label: 'grcote7.movies::lang.plugin.name'
         type: text
