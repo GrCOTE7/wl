@@ -1,6 +1,12 @@
 <div class="container">
 
-    <form data-request="onSave">
+    <form method="POST" action="{{ url('add-actors') }}" accept-charset="UTF8" enctype="multipart/form-data">
+
+        <input type="hidden" name="_handler" value="onSave">
+
+        {{ form_token() }}
+        {{ form_sessionKey() }}
+
 
         {% flash success %}
 
@@ -15,6 +21,9 @@
 
         <label>Actor last name</label>
         <input type="text" name="lastname" value="Wayne">
+
+        <label>Actor image</label>
+        <input type="file" name="actorimage"></input>
 
         <button type="submit">Save actor</button>
 
