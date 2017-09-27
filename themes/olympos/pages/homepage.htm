@@ -9,10 +9,44 @@ sortOrder = "lastname desc"
 
 [siteSearchInclude]
 ==
+<?php
+
+use Grcote7\Movies\Models\Movie;
+
+function onStart(){
+    $this['movies'] = Movie::take(4)->get();
+}
+?>
+==
 <form action="{{ 'search' | page }}" method="get">
     <input name="q" type="text" placeholder="What are you looking for?" autocomplete="off">
     <button type="submit">Search</button>
 </form>
+
+<div class="container">
+
+    <h2>Films</h2>
+
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <h3>
+                <a href="/films/film/{{movie.slug}}">
+                    {{ movie.name}} - {{movie.year}}
+                </a>
+            </h3>
+            <p>{{ html_limit(movie.description,90)|raw }}</p>
+        </li>
+        {% else %}
+        <li class="no-data">Pas de films trouvés</li>
+        {% endfor %}
+    </ul>
+
+    <div>
+        {{movies.render|raw}}
+    </div>
+
+</div>
 
 <h2>This is our homepage! Yay!</h2>
 {% component 'actors' %}
