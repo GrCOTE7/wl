@@ -44,4 +44,11 @@ class Actor extends Model {
 
     return $this->name . ' ' . $this->lastname;
   }
+
+
+  protected $fillable = [
+    'name',
+    'lastname'
+  ];
+
 }
