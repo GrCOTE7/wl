@@ -3,6 +3,7 @@
 
 use Mail;
 use Input;
+use October\Rain\Support\Facades\Flash;
 use ValidationException;
 use Redirect;
 use Validator;
@@ -45,13 +46,12 @@ class ContactForm extends ComponentBase {
       Flash::success('Jobs done!');
 
       // Envoi de l'email en réel
-      /*
+
       Mail::send('grcote7.contact::mail.message', $vars, function ($message) {
 
         $message->to('grcote7@gmail.com', 'Lionel COTE');
         $message->subject('New message from my contact form.');
       });
-      */
     }
   }
 
