@@ -8,9 +8,14 @@ results = 3
 sortOrder = "lastname desc"
 
 [siteSearchInclude]
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+searchPage = "search.htm"
 ==
 <?php
-
 use Grcote7\Movies\Models\Movie;
 
 function onStart(){
@@ -18,12 +23,9 @@ function onStart(){
 }
 ?>
 ==
-<form action="{{ 'search' | page }}" method="get">
-    <input name="q" type="text" placeholder="What are you looking for?" autocomplete="off">
-    <button type="submit">Search</button>
-</form>
-
 <div class="container">
+
+    {% component 'searchInput' %}
 
     <h2>Films</h2>
 
