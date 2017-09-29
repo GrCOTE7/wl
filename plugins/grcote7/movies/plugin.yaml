@@ -9,12 +9,26 @@ navigation:
         label: Films
         url: grcote7/movies/films
         icon: icon-video-camera
+        permissions:
+            - manage_movies
         sideMenu:
             side-menu-item:
                 label: Genres
                 url: grcote7/movies/genres
                 icon: icon-tag
+                permissions:
+                    - manage_genres
             side-menu-item2:
                 label: Acteurs
                 url: grcote7/movies/actors
                 icon: icon-user
+permissions:
+    manage_movies:
+        tab: 'grcote7.movies::lang.plugin.name'
+        label: 'Manage movies'
+    manage_genres:
+        tab: 'grcote7.movies::lang.plugin.name'
+        label: 'Manage genres'
+    delete_movies:
+        tab: 'grcote7.movies::lang.plugin.name'
+        label: 'Delete movies'
