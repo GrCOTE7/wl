@@ -374,6 +374,11 @@ form button {
     color: red;
 }
 
+.blanc {
+    color: #fff;
+    text-decoration: none;
+}
+
 h1 {
     font-size: 1.7em;
 }

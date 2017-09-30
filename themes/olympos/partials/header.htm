@@ -1,3 +1,4 @@
+[viewBag]
 ==
 <header class="main-header">
     <div class="container clearfix">
@@ -17,6 +18,10 @@
 
                 <li class="{% if this.page.id == 'contact' %} active {% endif %}"><a
                         href="{{ 'contact'|page }}">Contact</a>
+                </li>
+
+                <li class="{% if this.page.id == 'about' %} active {% endif %}"><a
+                        href="about">About</a>
                 </li>
 
                 <!--<li class="{% if this.page.id == 'register' %} active {% endif %}"><a-->
