@@ -3,11 +3,6 @@ columns:
         label: Id
         type: number
         sortable: true
-        sortable: true
-    poster:
-        label: Poster
-        type: partial
-        path: ~/plugins/grcote7/movies/models/movie/_poster_column.htm
     name:
         label: 'grcote7.movies::lang.plugin.name'
         type: text
@@ -16,4 +11,14 @@ columns:
     year:
         label: 'grcote7.movies::lang.plugin.year'
         type: number
-
+        sortable: true
+    poster:
+        label: Poster
+        type: partial
+        path: ~/plugins/grcote7/movies/models/movie/_poster_column.htm
+    genres:
+        label: Genres
+        type: text
+        searchable: true
+        select: genre_title
+        relation: genres

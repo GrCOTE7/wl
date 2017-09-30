@@ -9,3 +9,9 @@ columns:
         type: text
         searchable: true
         sortable: true
+    patronyme:
+        label: 'Nom complet'
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(name, '' '', lastname)'

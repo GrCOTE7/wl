@@ -12,6 +12,12 @@ navigation:
         permissions:
             - manage_movies
         sideMenu:
+            main-menu-item:
+                label: Films
+                url: grcote7/movies/films
+                icon: icon-video-camera
+                permissions:
+                    - manage_movies
             side-menu-item:
                 label: Genres
                 url: grcote7/movies/genres

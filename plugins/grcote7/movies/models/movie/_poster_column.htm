@@ -1,1 +1,5 @@
-<img src="<?= $value['path'] ?>">
+<?php if ($record->poster) : ?>
+
+<img src="<?= $value->getThumb(80,80,'crop') ?>">
+
+<?php endif ?>
