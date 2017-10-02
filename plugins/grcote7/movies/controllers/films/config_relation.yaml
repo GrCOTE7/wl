@@ -1,0 +1,13 @@
+genres:
+  label: Genre
+  view:
+    list: $/grcote7/movies/models/genre/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    form: $/grcote7/movies/models/genre/fields.yaml
+    showCheckbox: true
+actors:
+  label: actors
+  view:
+    list: $/grcote7/movies/models/actor/columns.yaml
+    recordUrl: grcote7/movies/actors/update/:id

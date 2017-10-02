@@ -2,7 +2,8 @@ fields:
     actors:
         label: Acteurs principaux
         span: left
-        type: actorbox
+        type: partial
+        path: field_actor
     name:
         label: Titre
         oc.commentPosition: ''
@@ -57,7 +58,8 @@ fields:
         nameFrom: genre_title
         descriptionFrom: description
         span: auto
-        type: relation
+        type: partial
+        path: field_genre
     other_actors:
         label: 'Autres acteurs'
         oc.commentPosition: ''
