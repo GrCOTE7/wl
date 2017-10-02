@@ -15,3 +15,8 @@ columns:
         searchable: true
         sortable: true
         select: 'concat(name, '' '', lastname)'
+    actorimage:
+        label: Photo
+        type: partial
+        sortable: false
+        path: ~/plugins/grcote7/movies/models/actor/_tof_column.htm
