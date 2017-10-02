@@ -57,3 +57,6 @@
 1.0.20:
     - 'Seed movies'
     - seed.php
+1.0.21:
+    - 'Updated table grcote7_movies_films'
+    - builder_table_update_grcote7_movies_films_9.php

@@ -1,8 +1,8 @@
 <?php
 
+use Grcote7\Movies\Models\Genre;
 use Grcote7\Movies\Models\Movie;
 use Grcote7\Movies\Models\Actor;
-
 
 Route::get('u', function () {
 
@@ -34,4 +34,26 @@ Route::get('seed-actors', function () {
   else {
     return 'Les acteurs avaient déjà été créés par seeding...<hr>( La table en contient ' . $nbActors . '! )';
   }
+});
+
+
+Route::get('/populate-movies', function () {
+
+  $faker = Faker\Factory::create();
+
+  $movies = Movie::all();
+
+
+  foreach ($movies as $movie) {
+    $genres = Genre::all()
+                   ->random(3);
+
+    $movie->genres = $genres;
+
+    $movie->created_at = $faker->date($format = 'Y-m-d H:i:s', $max = 'now');
+    $movie->published  = $faker->boolean($chanceOfGettingTrue = 50);
+    $movie->save();
+  }
+
+  return $movies;
 });
