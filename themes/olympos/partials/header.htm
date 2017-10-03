@@ -8,7 +8,7 @@
             <ul>
                 <li class="{% if this.page.id == 'homepage' %} active {% endif %}"><a href="{{ 'homepage'|page }}">Accueil</a>
                 </li>
-                <li class="{% if (this.page.id == 'films') or (this.page.id == 'movie-single') or (this.page.id == 'genres') %} active {% endif %}">
+                <li class="{% if (this.page.id == 'films') or (this.page.id == 'movie-single') or (this.page.id == 'genres')  or (this.page.id == 'filter-movies') %} active {% endif %}">
                     <a
                             href="{{ 'films'|page }}">Films</a>
                 </li>

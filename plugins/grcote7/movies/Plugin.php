@@ -8,7 +8,8 @@ class Plugin extends PluginBase {
 
     return [
       'Grcote7\Movies\Components\Actors'    => 'actors',
-      'Grcote7\Movies\Components\ActorForm' => 'actorform'
+      'Grcote7\Movies\Components\ActorForm' => 'actorform',
+      'Grcote7\Movies\Components\FilterMovies' => 'filtermovies'
     ];
   }
 

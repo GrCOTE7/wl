@@ -1,0 +1,43 @@
+{%  set movies = __SELF__.movies %}
+{%  set genres = __SELF__.genres %}
+{%  set years = __SELF__.years %}
+
+<form action="{{ url('filter-movies') }}" method="GET">
+    <div>
+        <label>Year</label>
+        <select name="year">
+            <option value="">Any</option>
+            {% for year in years | sort | reverse(true) %}
+            <option value="{{ year }}">{{ year }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <label>Genre</label>
+    <select name="genre">
+        <option value="">Any</option>
+        {% for genre in genres %}
+        <option value="{{ genre.slug }}">{{ genre.genre_title }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Filter</button>
+</form>
+
+<h3>Liste des films enregistrés:</h3>
+<ul class="movie-list">
+    {% for movie in movies %}
+    <li>
+        <h3>
+            <a href="/films/film/{{movie.slug}}">
+                {{ movie.name}} - {{movie.year}}
+            </a>
+        </h3>
+        <p>{{ html_limit(movie.description,150)|raw }}</p>
+        <br>
+        {% for genre in movie.genres %}
+        <small>{{ genre.genre_title }} |</small>
+        {% endfor %}
+    </li>
+    {% else %}
+    <li class="no-data">Pas de films trouvés</li>
+    {% endfor %}
+</ul>
