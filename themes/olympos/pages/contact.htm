@@ -7,16 +7,19 @@ is_hidden = 0
 
 [siteSearchInclude]
 ==
+function onStart(){
+$this->addJs('assets/js/app.min.js');
+}
+==
 <h2>Contact Page</h2>
-
+JS ===> <span id="maCase"></span>
 <p>This is our awesome contact page</p>
 
 <div class="container">
     {% flash %}
-    <p
-            data-control="flash-message"
-            class="flash-message fade {{ type }}"
-            data-interval="5">
+    <p data-control="flash-message"
+       class="flash-message fade {{ type }}"
+       data-interval="5">
         {{ message }}
     </p>
     {% endflash %}

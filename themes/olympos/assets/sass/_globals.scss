@@ -7,8 +7,10 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: cornsilk;
   color: #566b78;
+  background: cornsilk;
+  //color: maroon;
+  //background:  lightsteelblue;
 }
 
 .container {
@@ -135,9 +137,9 @@ form {
   color: #fff;
   font-weight: bold;
   font-size: 1.2em;
-  display:none;
+  display: none;
 
-  &.active{
+  &.active {
     display: block;
   }
 
