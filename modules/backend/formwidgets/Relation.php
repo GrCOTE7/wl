@@ -48,7 +48,7 @@ class Relation extends FormWidgetBase
     //
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     protected $defaultAlias = 'relation';
 
@@ -58,7 +58,7 @@ class Relation extends FormWidgetBase
     public $renderFormField;
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function init()
     {
@@ -74,7 +74,7 @@ class Relation extends FormWidgetBase
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function render()
     {
@@ -139,16 +139,22 @@ class Relation extends FormWidgetBase
                 $result = $query->getQuery()->get();
             }
 
+            // Some simpler relations can specify a custom local or foreign "other" key,
+            // which can be detected and implemented here automagically.
+            $primaryKeyName = in_array($relationType, ['hasMany', 'belongsTo', 'hasOne'])
+                ? $relationObject->getOtherKey()
+                : $relationModel->getKeyName();
+
             $field->options = $usesTree
-                ? $result->listsNested($nameFrom, $relationModel->getKeyName())
-                : $result->lists($nameFrom, $relationModel->getKeyName());
+                ? $result->listsNested($nameFrom, $primaryKeyName)
+                : $result->lists($nameFrom, $primaryKeyName);
 
             return $field;
         });
     }
 
     /**
-     * {@inheritDoc}
+     * @inheritDoc
      */
     public function getSaveValue($value)
     {

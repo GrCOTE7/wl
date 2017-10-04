@@ -11,3 +11,8 @@ var salut = function Salut(name) {
 
 
 new salut('Tôa');
+
+
+$(document).tooltip({
+    selector: "[data-toggle=tooltip]"
+})
