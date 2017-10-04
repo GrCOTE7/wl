@@ -22,5 +22,8 @@
   "devDependencies": {
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-livereload": "^1.1.6"
+  },
+  "dependencies": {
+    "semantic-ui-css": "^2.2.12"
   }
 }

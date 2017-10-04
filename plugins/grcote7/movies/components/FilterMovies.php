@@ -31,6 +31,7 @@ class FilterMovies extends ComponentBase {
   public function filterYears() {
 
     $query = Movie::all();
+
     $years = [];
 
     foreach ($query as $movie) {
@@ -80,7 +81,7 @@ class FilterMovies extends ComponentBase {
     }
 
 
-    //    dd($query);
+//      dd($query->find(1)->year);
     //    $query=777;
     return $query;
   }

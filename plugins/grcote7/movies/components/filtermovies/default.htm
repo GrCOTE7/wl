@@ -23,9 +23,9 @@
 </form>
 
 <h3>Liste des films enregistrés:</h3>
-<ul class="movie-list">
+<ul class="movie-list ">
     {% for movie in movies %}
-    <li>
+    <li class = "ui segment">
         <h3>
             <a href="/films/film/{{movie.slug}}">
                 {{ movie.name}} - {{movie.year}}

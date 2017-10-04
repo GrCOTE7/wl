@@ -27,11 +27,11 @@ function onStart(){
 
     {% component 'searchInput' %}
 
-    <h2>Films</h2>
+    <h2>Films x</h2>
 
     <ul>
         {% for movie in movies %}
-        <li>
+        <li class="ui segment">
             <h3>
                 <a href="/films/film/{{movie.slug}}">
                     {{ movie.name}} - {{movie.year}}

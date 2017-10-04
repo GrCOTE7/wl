@@ -1,4 +1,7 @@
+@import url(semantic-ui-css/semantic.min.css);
 /* Vendor */
+/* @import "susy"; */
+/* @import "su"; */
 /* Setup */
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 @import "https://fonts.googleapis.com/css?family=Roboto:400,700";
@@ -255,10 +258,6 @@ form {
 .clr {
   content: "test"; }
 
-.red {
-  color: red;
-  font-weight: bold; }
-
 .flash {
   padding: 20px;
   margin: 10px 0;
@@ -276,6 +275,10 @@ form {
     background: red; }
   .flash.success {
     background: limegreen; }
+
+.red {
+  color: red;
+  font-weight: bold; }
 
 .main-header {
   background: #333; }

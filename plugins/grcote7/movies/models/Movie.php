@@ -32,7 +32,6 @@ class Movie extends Model {
 
   public $belongsToMany = [
     'genres' => [
-
       'Grcote7\Movies\Models\Genre',
       'table' => 'grcote7_movies_films_genres',
       'order' => 'genre_title'

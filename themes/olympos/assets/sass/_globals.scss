@@ -10,7 +10,7 @@ body {
   color: #566b78;
   background: cornsilk;
   //color: maroon;
-  //background:  lightsteelblue;
+  //background: lightsteelblue;
 }
 
 .container {
@@ -126,11 +126,6 @@ form {
   content: "test";
 }
 
-.red {
-  color: red;
-  font-weight: bold;
-}
-
 .flash {
   padding: 20px;
   margin: 10px 0;
@@ -153,4 +148,9 @@ form {
   &.success {
     background: limegreen;
   }
+}
+
+.red {
+  color: red;
+  font-weight: bold;
 }
