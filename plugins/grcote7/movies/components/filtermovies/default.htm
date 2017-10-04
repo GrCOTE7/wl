@@ -3,6 +3,7 @@
 {%  set years = __SELF__.years %}
 
 <form action="{{ url('filter-movies') }}" method="GET">
+
     <div>
         <label>Year</label>
         <select name="year">
@@ -12,6 +13,7 @@
             {% endfor %}
         </select>
     </div>
+
     <label>Genre</label>
     <select name="genre">
         <option value="">Any</option>
@@ -19,13 +21,14 @@
         <option value="{{ genre.slug }}">{{ genre.genre_title }}</option>
         {% endfor %}
     </select>
+
     <button type="submit">Filter</button>
 </form>
 
 <h3>Liste des films enregistrés:</h3>
 <ul class="movie-list ">
     {% for movie in movies %}
-    <li class = "ui segment">
+    <li class="ui segment">
         <h3>
             <a href="/films/film/{{movie.slug}}">
                 {{ movie.name}} - {{movie.year}}
