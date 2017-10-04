@@ -15,7 +15,7 @@ security = "all"
     <meta name="generator" content="OctoberCMS">
     <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}"/>
     {% styles %}
-    <link href="{{ 'assets/sass/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/compiled/css/style.css'|theme }}" rel="stylesheet">
 </head>
 <body>
 
@@ -29,6 +29,10 @@ security = "all"
 {% partial "footer" %}
 
 <!-- Scripts -->
+
+{% framework extras %}
+{% scripts %}
+
 <script src="{{ 'assets/compiled/js/all.js'|theme }}"></script>
 
 
@@ -49,10 +53,8 @@ security = "all"
 
 </script>
 
-{% framework extras %}
-{% scripts %}
 <!--
-<script src="{{'assets/js/app.min.js'|theme }}"></script>
+<script src="{{'assets/js/app.js'|theme }}"></script>
 -->
 </body>
 </html>

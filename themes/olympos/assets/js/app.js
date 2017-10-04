@@ -10,7 +10,7 @@ var salut = function Salut(name) {
 };
 
 
-new salut('Tôa');
+new salut('Tôa 12');
 
 
 $(document).tooltip({
