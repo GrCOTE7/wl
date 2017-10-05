@@ -10,18 +10,22 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-mix.setPublicPath = './themes/olympos/assets/';
+
+mix.setPublicPath('./themes/olympos/assets/');
 
 
-mix.js('./themes/olympos/assets/js/app.js', 'dist/')
-   .sass('./themes/olympos/assets/sass/style.scss', 'dist/');
-
+mix.js('./themes/olympos/assets/js/app.js', 'dist/js')
+   .sass('./themes/olympos/assets/sass/style.scss', 'dist/css');
 
 mix.browserSync({
     proxy: 'wl',
     host: 'wl',
-    notify: false,
-    files: ["./themes/olympos/assets/dist/css/*.css", "./themes/olympos/**/*.htm", "./themes/olympos/assets/dist/js/*.js"]
+    notify: true,
+    files: [
+    	"./themes/olympos/assets/dist/css/*.css",
+     	"./themes/olympos/**/*.htm",
+     	"./themes/olympos/assets/dist/js/*.js"
+     ]
 })
 
 // Full API

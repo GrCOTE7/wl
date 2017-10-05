@@ -319,14 +319,14 @@ if (Mix.browserSync) {
     plugins.push(
         new webpackPlugins.BrowserSyncPlugin(
             Object.assign({
-                host: 'wl',
+                host: 'localhost',
                 port: 3000,
                 proxy: 'wl',
                 files: [
                     'app/**/*.php',
                     'resources/views/**/*.php',
-                    'public/js/**/*.js',
-                    'public/css/**/*.css'
+                    'dist/js/**/*.js',
+                    'disy/css/**/*.css'
                 ]
             }, Mix.browserSync),
             {

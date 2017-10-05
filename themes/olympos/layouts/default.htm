@@ -15,46 +15,49 @@ security = "all"
     <meta name="generator" content="OctoberCMS">
     <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}"/>
     {% styles %}
-    <link href="{{ 'assets/compiled/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/dist/css/style.css'|theme }}" rel="stylesheet">
 </head>
 <body>
 
-{% partial "header" %}
+    {% partial "header" %}
 
-<!-- Content -->
-<section id="layout-content" class="container clearfix">
-    {% page %}
-</section>
+    <!-- Content -->
+    <section id="layout-content" class="container clearfix">
+        {% page %}
+    </section>
 
-{% partial "footer" %}
+    {% partial "footer" %}
 
-<!-- Scripts -->
+    <!-- Scripts -->
 
-{% framework extras %}
-{% scripts %}
+    <script src="{{ 'assets/dist/js/app.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
 
-<script src="{{ 'assets/compiled/js/all.js'|theme }}"></script>
 
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    jQuery(document).ready(function ($) {
+        jQuery(document).ready(function ($) {
 
-        $('.contact-form').on('ajaxError', function (event, message) {
-            $('.flash').removeClass('active');
-            $('.flash.error').addClass('active');
+            $('.contact-form').on('ajaxError', function (event, message) {
+                $('.flash').removeClass('active');
+                $('.flash.error').addClass('active');
+            });
+
+            $('.contact-form').on('ajaxSuccess', function (event, message) {
+                $('.flash').removeClass('active');
+                $('.flash.success').addClass('active');
+            });
         });
 
-        $('.contact-form').on('ajaxSuccess', function (event, message) {
-            $('.flash').removeClass('active');
-            $('.flash.success').addClass('active');
-        });
-    });
+    </script>
 
-</script>
+    <!--
+    <script src="{{'assets/js/app.js'|theme }}"></script>
+    -->
 
-<!--
-<script src="{{'assets/js/app.js'|theme }}"></script>
--->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
 </body>
 </html>

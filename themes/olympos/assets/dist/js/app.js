@@ -70,22 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-function sayHi(name) {
-    $('#maCase').html('<b>Salut, ' + name + ' !</b>');
-}
-
-// sayHi('Toi');
-
-
-var salut = function Salut(name) {
-    $('#maCase').html('<b>Salut, ' + name + ' !</b>');
-};
-
-new salut('Tôa 12');
-
-$(document).tooltip({
-    selector: "[data-toggle=tooltip]"
-});
+throw new Error("Module build failed: SyntaxError: c:/laragon/www/wl/themes/olympos/assets/js/app.js: Unexpected token (4:0)\n\n\u001b[0m \u001b[90m 2 | \u001b[39m\u001b[90m// sayHi('Toi');\u001b[39m\n \u001b[90m 3 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 | \u001b[39m\u001b[37m\u001b[41m\u001b[1m@\u001b[22m\u001b[49m\u001b[39m\u001b[36mimport\u001b[39m \u001b[32m'sayhi.js'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m   | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 | \u001b[39m\n \u001b[90m 6 | \u001b[39m\u001b[36mnew\u001b[39m salut(\u001b[32m'Tsôa 0012'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 | \u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 1 */

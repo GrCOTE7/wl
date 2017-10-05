@@ -166,8 +166,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #566b78;
-  color: maroon; }
+  background: lightsteelblue; }
 
 .container {
   width: 97%;
