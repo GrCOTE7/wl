@@ -20,7 +20,7 @@ mix.js('./themes/olympos/assets/js/app.js', 'dist/js')
 mix.browserSync({
     proxy: 'wl',
     host: 'wl',
-    notify: false,
+    notify: true,
     files: [
     	"./themes/olympos/assets/dist/css/*.css",
      	"./themes/olympos/**/*.htm",
