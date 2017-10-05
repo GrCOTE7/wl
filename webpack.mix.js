@@ -20,7 +20,7 @@ mix.js('./themes/olympos/assets/js/app.js', 'dist/js')
 mix.browserSync({
     proxy: 'wl',
     host: 'wl',
-    notify: true,
+    notify: false,
     files: [
     	"./themes/olympos/assets/dist/css/*.css",
      	"./themes/olympos/**/*.htm",
@@ -35,9 +35,9 @@ mix.browserSync({
 // mix.sass(src, output);
 // mix.less(src, output);
 // mix.stylus(src, output);
-// mix.browserSync('my-site.dev');
+// mix.browserSync('wl:3000');
 // mix.combine(files, destination);
-// mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.
+// mix.babel(files, destination); //<-- Identical to mix.combine(), but also includes Babel compilation.
 // mix.copy(from, to);
 // mix.copyDirectory(fromDir, toDir);
 // mix.minify(file);

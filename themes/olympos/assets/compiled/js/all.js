@@ -4,7 +4,4 @@
 // sayHi('Toi');
 
 
-
-new salut('Tsôa 0012');
-
 //# sourceMappingURL=all.js.map

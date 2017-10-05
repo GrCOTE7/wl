@@ -1,6 +1,14 @@
 
-// sayHi('Toi');
+//import {sayHi, sayBye} from './sayhi';
 
-@import 'sayhi.js';
+//sayHi('Toi 123 !');
 
-new salut('Tsôa 0012');
+class HelloWorld {
+	constructor(name){
+	 
+	 $('#maCase').html('<b>Salut, le Monde !</b><br><br>Et <strong>'+name+'</strong> !');
+
+	}
+}
+
+new HelloWorld('Lionel');
