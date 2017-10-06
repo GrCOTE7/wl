@@ -3,9 +3,6 @@
 composer.phar
 .DS_Store
 .idea
-.env
-.env.*.php
-.env.php
 php_errors.log
 nginx-error.log
 nginx-access.log
@@ -20,7 +17,8 @@ composer.lock
 nbproject
 
 /node_modules
-_assets_
-
 .phpintel/
 .phpintel/index
+
+/themes/olympos/assets/compiled
+/themes/olympos/assets/dist

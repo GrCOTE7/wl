@@ -73,7 +73,10 @@ Route::get('sitemap.xml', function () {
 
 
 
-
+Route::get('uuu', function(){
+  /*return 'Oki 12345';*/
+  return view ('uuu');
+});
 
 
 

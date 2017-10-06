@@ -3,8 +3,33 @@ url = "/semantic"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+function onStart (){
+	
+	$a=2;
+	$b=5;
+
+	$somme = $a + $b;
+
+	$this['monOpe'] = $a. ' + '.$b; 
+	$this['maVar']=$somme;
+
+}
+?>
+==
+
+<h1>DEBUT<div id="masCase">Le monde est bô !</div>FIN</h1>
+
+
 <div class="container"><br>
-    <p class="ui piled segment header centered">Semantic UI 123</p>
+    <p class="ui piled segment header centered">Semantic UI 123
+
+    	<br><br>
+
+    oOo Le résultat de mon opération {{ monOpe }} est = {{ maVar }}
+
+</p>
+
     <br>
     <i class="ae flag"></i>
     <i class="france flag"></i>
