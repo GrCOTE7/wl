@@ -72,9 +72,9 @@ Route::get('sitemap.xml', function () {
 });
 
 
-
+// Simple route sur le fichier resources/views/uuu.php
 Route::get('uuu', function(){
-  /*return 'Oki 12345';*/
+  /*return 'Oki';*/
   return view ('uuu');
 });
 

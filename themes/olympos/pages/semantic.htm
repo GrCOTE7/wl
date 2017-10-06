@@ -6,36 +6,47 @@ is_hidden = 0
 <?php
 function onStart (){
 	
-	$a=2;
-	$b=5;
-
-	$somme = $a + $b;
-
-	$this['monOpe'] = $a. ' + '.$b; 
-	$this['maVar']=$somme;
+	
+	$this['pays']=['fr', 'be', 'cn', 'it', 'de', 'australia'];
+	
+	/*dd($this['pays']);*/
+	/*dd(count($this['pays']));*/
+	
+	/*
+	for ($i=0; $i<count($this['pays']); $i++){
+		echo $this['pays'][$i].' ';
+	}
+	*/
 
 }
 ?>
 ==
-
-<h1>DEBUT<div id="masCase">Le monde est bô !</div>FIN</h1>
+<h2>
+    <div id="maCase">Le monde est bô !</div>
+</h2>
 
 
 <div class="container"><br>
-    <p class="ui piled segment header centered">Semantic UI 123
+    <p class="ui piled segment header centered">Semantic UI
 
-    	<br><br>
+        <br><br>
 
-    oOo Le résultat de mon opération {{ monOpe }} est = {{ maVar }}
+        <a href="https://www.youtube.com/watch?v=a9mUH1EWp40" target="_blank">Vidéo en cours</a>
 
-</p>
+        <br><br>
+
+        {% for codepays in pays %}
+        	<i class="{{codepays}} flag"></i>
+        {% endfor %}
+
+    </p>
 
     <br>
-    <i class="ae flag"></i>
-    <i class="france flag"></i>
-    <i class="myanmar flag"></i>
-    <!--<hr><img src="/themes/default/assets/images/flags.png" alt="">-->
     <button class="ui button">Read more</button>
     <button class="ui primary button">Read more</button>
+
+    <hr>
     <button class="ui purple basic button"><i class="user icon"></i>Profil</button>
+    <hr>
+
 </div>

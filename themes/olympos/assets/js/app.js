@@ -4,11 +4,9 @@
 
 class HelloWorld {
     constructor(name) {
-	var a = 2;
-	var b=210;
 
-        $('#masCase')
-        	.html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> ! => '+ (a+b));
+        $('#maCase')
+        	.html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
 
     }
 }
