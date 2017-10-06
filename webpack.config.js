@@ -147,13 +147,12 @@ let rules = [
                 options: {
                     name: path => {
                         if (! /node_modules|bower_components/.test(path)) {
-                            return 'images/[name].[ext]?[hash]';
+                            return '/themes/default/assets/images/[name].[ext]?[hash]';
                         }
-
-                        return 'images/vendor/' + path
+                        return '../../../' + path
                             .replace(/\\/g, '/')
                             .replace(
-                                /((.*(node_modules|bower_components))|images|image|img|assets)\//g, ''
+                                /(.*(node_modules|bower_components|semantic-ui-css))\//g, ''
                             ) + '?[hash]';
                     },
                     publicPath: Mix.options.resourceRoot
@@ -169,13 +168,13 @@ let rules = [
         options: {
             name: path => {
                 if (! /node_modules|bower_components/.test(path)) {
-                    return 'themes/olympos/assets/images/icons/[name].[ext]?[hash]';
+                    return '/themes/default/assets/fonts/[name].[ext]?[hash]';
                 }
 
-                return './' + path
+                return '../../../' + path
                     .replace(/\\/g, '/')
                     .replace(
-                        /((.*(node_modules|bower_components))|fonts|font|assets)\//g, ''
+                        /(.*(node_modules|bower_components|semantic-ui-css))\//g, ''
                     ) + '?[hash]';
             },
             publicPath: Mix.options.resourceRoot
@@ -319,7 +318,7 @@ if (Mix.browserSync) {
     plugins.push(
         new webpackPlugins.BrowserSyncPlugin(
             Object.assign({
-                host: 'wl/semantic',
+                host: 'wl',
                 port: 3000,
                 proxy: 'wl',
                 files: [

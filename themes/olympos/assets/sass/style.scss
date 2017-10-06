@@ -1,4 +1,4 @@
-@import "~semantic-ui-css/semantico.css";
+@import "~semantic-ui-css/semantic.min.css";
 /* Vendor */
 /* @import "susy"; */
 /* @import "su"; */
@@ -13,3 +13,6 @@
 @import "sidebar";
 @import "footer";
 
+.ui.piled.segment {
+  margin: 0;
+}
