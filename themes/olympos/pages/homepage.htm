@@ -11,7 +11,7 @@ sortOrder = "lastname desc"
 
 [searchInput]
 useAutoComplete = 1
-autoCompleteResultCount = 5
+autoCompleteResultCount = 7
 showProviderBadge = 1
 searchPage = "search.htm"
 ==
@@ -24,17 +24,12 @@ function onStart(){
 ?>
 ==
 <div class="container">
-
     {% component 'searchInput' %}
-
     <h2>Films</h2>
-    
-    <br>
-    <div id="maCase"></div>
 
     <ul>
         {% for movie in movies %}
-        <li class="ui segment">
+        <li class="ui stacked segment">
             <h3>
                 <a href="/films/film/{{movie.slug}}">
                     {{ movie.name}} - {{movie.year}}

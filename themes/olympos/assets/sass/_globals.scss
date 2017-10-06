@@ -7,9 +7,11 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+
   //color: #566b78;
   background: cornsilk;
-  //color: maroon;
+  color: maroon;
+
   //background: lightsteelblue;
 }
 
@@ -39,6 +41,7 @@ a {
   background: #efefef;
   border: 1px solid #ccc;
   border-radius: 3px;
+
   li {
     float: left;
     margin: 5px;
@@ -142,9 +145,11 @@ form {
   -moz-border-radius: 7px;
   border-radius: 7px;
   text-align: center;
+
   &.error {
     background: red;
   }
+
   &.success {
     background: limegreen;
   }
@@ -152,5 +157,9 @@ form {
 
 .red {
   color: red;
+  font-weight: bold;
+}
+
+strong {
   font-weight: bold;
 }

@@ -1,17 +1,17 @@
 {% if results.count %}
-    {% for result in results | slice(0, __SELF__.autoCompleteResultCount) %}
-        {# Display results #}
-        {% partial __SELF__ ~ '::searchresult.htm' result = result %}
-    {% endfor %}
+{% for result in results | slice(0, __SELF__.autoCompleteResultCount) %}
+{# Display results #}
+{% partial __SELF__ ~ '::searchresult.htm' result = result %}
+{% endfor %}
 
-    {% if __SELF__.searchPage %}
-        <p class="ss-show-all-results">
-            <a href="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}">
-                Show all results &raquo;
-            </a>
-        </p>
-    {% endif %}
+{% if __SELF__.searchPage %}
+<p class="ss-show-all-results">
+    <a href="{{ __SELF__.searchPage | page }}?q={{ query | url_encode(true) }}">
+        Show all results (Not just the <strong>{{__SELF__.autoCompleteResultCount }}</strong> first )&raquo;
+    </a>
+</p>
+{% endif %}
 {% else %}
-    {# No results found #}
-    <p>Your search for {{ query }} returned no results.</p>
+{# No results found #}
+<p>Your search for {{ query }} returned no results {{__SELF__.autoCompleteResultCount }}.</p>
 {% endif %}

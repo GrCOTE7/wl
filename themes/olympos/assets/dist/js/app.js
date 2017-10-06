@@ -77,12 +77,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 //sayHi('Toi 123 !');
 
 var HelloWorld = function HelloWorld(name) {
-	_classCallCheck(this, HelloWorld);
+    _classCallCheck(this, HelloWorld);
 
-	$('#maCase').html('<b>Salut, le Monde !</b><br><br>Et <strong>' + name + '</strong> !');
+    $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
 };
 
-new HelloWorld('Lionel');
+new HelloWorld('Lionel CÔTE');
 
 /***/ }),
 /* 1 */
