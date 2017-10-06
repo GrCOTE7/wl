@@ -169,10 +169,10 @@ let rules = [
         options: {
             name: path => {
                 if (! /node_modules|bower_components/.test(path)) {
-                    return 'fonts/[name].[ext]?[hash]';
+                    return 'themes/olympos/assets/images/icons/[name].[ext]?[hash]';
                 }
 
-                return 'fonts/vendor/' + path
+                return './' + path
                     .replace(/\\/g, '/')
                     .replace(
                         /((.*(node_modules|bower_components))|fonts|font|assets)\//g, ''
@@ -319,13 +319,14 @@ if (Mix.browserSync) {
     plugins.push(
         new webpackPlugins.BrowserSyncPlugin(
             Object.assign({
-                host: 'wl',
+                host: 'wl/semantic',
                 port: 3000,
                 proxy: 'wl',
                 files: [
                     'app/**/*.php',
-                    'dist/js/**/*.js',
-                    'disy/css/**/*.css'
+                    'resources/views/**/*.php',
+                    'public/js/**/*.js',
+                    'public/css/**/*.css'
                 ]
             }, Mix.browserSync),
             {
