@@ -82,10 +82,8 @@ var HelloWorld = function HelloWorld(name) {
     $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
 };
 
-/*new HelloWorld('Lionel CÔTE');*/
-
-
-new HelloWorld('Doro');
+new HelloWorld('Lionel CÔTE');
+// new HelloWorld('Doro');
 
 /***/ }),
 /* 1 */

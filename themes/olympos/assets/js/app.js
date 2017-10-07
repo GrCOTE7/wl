@@ -11,5 +11,5 @@ class HelloWorld {
     }
 }
 
-/*new HelloWorld('Lionel CÔTE');*/
-new HelloWorld('Doro');
+new HelloWorld('Lionel CÔTE');
+// new HelloWorld('Doro');
