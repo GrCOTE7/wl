@@ -51,5 +51,14 @@ class Movie extends Model {
   public $attachMany = [
     'movie_gallery' => 'System\Models\File'
   ];
+
+  public function scopeList($query, $options=[])
+  {
+    extract(array_merge()[
+      'page'=>1,
+      'perPage'=>10,
+    ]);
+  }
+
   
 }
