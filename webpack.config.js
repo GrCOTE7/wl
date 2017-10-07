@@ -319,7 +319,7 @@ if (Mix.browserSync) {
         new webpackPlugins.BrowserSyncPlugin(
             Object.assign({
                 host: 'wl',
-                port: 1111,
+                port: 3000,
                 proxy: 'wl',
                 files: [
                     'app/**/*.php',

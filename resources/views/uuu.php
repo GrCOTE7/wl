@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-  <h2><?= 'Salut en PHP ! => ' . (1 + 2); ?></h2>
+  <h2><?= 'Salut en PHP ! => ' . (3 + 2); ?></h2>
 
   <?php
 
@@ -26,7 +26,7 @@
   ?>
   <hr>
   <div class="ui floating message">
-    <p><strong>Un message flottant: Marche à suivre!</strong></p>
+    <p><i class="attention icon"></i><strong>Un message flottant: Marche à suivre!</strong></p>
   </div>
   <p class="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem commodi, consequatur doloribus
     earum et excepturi.</p>
