@@ -52,13 +52,18 @@ class Movie extends Model {
     'movie_gallery' => 'System\Models\File'
   ];
 
-  public function scopeList($query, $options=[])
-  {
-    extract(array_merge()[
-      'page'=>1,
-      'perPage'=>10,
-    ]);
+
+  public function scopeListFrontEnd($query, $options = []) {
+
+    extract(array_merge([
+                          'page'    => 1,
+                          'perPage' => 3,
+                          'sort'    => 'created_at desc',
+                          'gernes'  => null,
+                          'year'    => ''
+                        ], $options));
+
+    return $query->paginate($perPage, $page);
   }
 
-  
 }
