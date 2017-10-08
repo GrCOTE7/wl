@@ -8,8 +8,7 @@
 <body>
 <div class="container">
   <h2><?= 'Salut en PHP ! => ' . (3 + 2); ?></h2><br> 
-  <button class="ui button"><a href="/semantic">Retour à la page semantic</a></button>
-
+  <button class="small ui button"><a href="/semantic">Retour à la page semantic</a></button>
   <?php
 
   $imgLi = 'themes/olympos/assets/images/leo.jpg';
@@ -23,7 +22,7 @@
   ];
   ?>
 
-<div class="ui teal buttons">
+<div class="small ui teal buttons">
   <div class="ui button">Save</div>
   <div class="ui combo top right pointing dropdown icon button">
     <i class="dropdown icon"></i>
@@ -35,7 +34,7 @@
   </div>
 </div>
 
-<div class="ui icon buttons">
+<div class="small ui icon buttons">
   <div class="ui top left pointing dropdown button">
     <i class="user icon"></i>
     <div class="menu">
@@ -61,6 +60,14 @@
     </div>
   </div>
 </div>
+
+<button class="small ui button"><a href="https://semantic-ui.com/introduction/getting-started.html" target="_blank">Doc semantic</a></button>
+
+<br><br>
+<button class="ui right floated button">Droite flottant</button>
+<button class="ui left floated button">Gauche flottant</button>
+<br><br><br><br>
+
 
 <div class="max example">
 <div class="ui sub header">Selection</div>
@@ -948,7 +955,9 @@
 <script src="themes/default/assets/js/tablesort.js"></script>
 
 <script>
+
   $(function () {
+
     $('table').tablesort();
 
     $('.special.cards .image').dimmer({
@@ -960,22 +969,23 @@
     $('.combo.dropdown')
       .dropdown({
         action: 'combo'
-      });
+    });
 
+    $('.pointing.dropdown')
+      .dropdown();
+  
 
+    $('.max.example .ui.normal.dropdown')
+      .dropdown({
+        maxSelections: 3
+    });
 
-$('.max.example .ui.normal.dropdown')
-  .dropdown({
-    maxSelections: 3
-  })
-;
-$('.max.example .ui.special.dropdown')
-  .dropdown({
-    useLabels: false,
-    maxSelections: 3
-  })
-;
-    console.log("Ready for more!");
+    $('.max.example .ui.special.dropdown')
+      .dropdown({
+        useLabels: false,
+        maxSelections: 3
+    });
+      console.log("Ready for more!");
   });
 
 </script>
