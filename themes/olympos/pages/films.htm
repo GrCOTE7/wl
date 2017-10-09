@@ -26,8 +26,8 @@ $this['movies'] = Movie::orderBy('year', 'desc')->paginate(3);
 <div class="container">
 
     <h2>Films</h2>
-    (Un lien est possible avec paramètre: Ex. <a href='?name=titanic'>CeSite/films?name=titanic'</a> - <a
-        href="filter-movies">Filtermovies</a>)
+    (Un lien est possible avec paramètre: Ex. <a href='?name=titanic'>CeSite/films?name=titanic'</a><br>
+    <a href="filter-movies">Filtermovies</a> - <strong><a href="ajax-filter">Ajax Filter movies</a></strong>)
     <ul>
         {% for movie in movies %}
         <li>
