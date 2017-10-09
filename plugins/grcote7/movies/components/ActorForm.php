@@ -1,12 +1,13 @@
 <?php namespace Grcote7\Movies\Components;
 
-
-use Input;
-use October\Rain\Support\Facades\Flash;
-use Redirect;
-//use Validator;
 use Cms\Classes\ComponentBase;
+use Input;
+use Validator;
+use Redirect;
 use Grcote7\Movies\Models\Actor;
+use Flash;
+use ValidationException;
+use System\Models\File;
 
 class ActorForm extends ComponentBase {
 
@@ -14,20 +15,42 @@ class ActorForm extends ComponentBase {
 
     return [
       'name'        => 'Actor Form',
-      'description' => 'Enter actor'
+      'description' => 'Enter Actors'
     ];
   }
 
 
-  public function onSave() {
+  public function onSubmit() {
+
+    $validator = Validator::make($form = Input::all(), [
+                                                       'name'     => 'required|min:2',
+                                                       'lastname' => 'required|min:2'
+                                                     ]);
+
+    if ($validator->fails()) {
+      throw new ValidationException($validator);
+    }
+
 
     $actor             = new Actor();
-    $actor->name       = Input::get("name");
-    $actor->lastname   = Input::get("lastname");
-    $actor->actorimage = Input::file("actorimage");
-    $actor->save();
+    $actor->name       = Input::get('name');
+    $actor->lastname   = Input::get('lastname');
+    $actor->actorimage = Input::file('actorimage');
+ 
+     $actor->save();
 
-    Flash::success('Actor added !');
-    return Redirect::back();
+    Flash::success('Actor added!');
   }
+
+
+   public function onImageUpload() {
+        $image = Input::all();
+
+        $file = (new File())->fromPost($image['actorimage']);
+
+        return[
+            '#imageResult' => '<img src="' . $file->getThumb(200, 200, ['mode' => 'crop']) . '" >'
+        ];
+    }
+
 }

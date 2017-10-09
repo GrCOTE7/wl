@@ -1,7 +1,7 @@
 //import {sayHi, sayBye} from './sayhi';
 
 //sayHi('Toi 123 !');
-
+/*
 class HelloWorld {
     constructor(name) {
 
@@ -21,3 +21,4 @@ new HelloWorld('Lionel');
 		$form.request();
 	})
 })(jQuery);
+*/

@@ -70,28 +70,30 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 //import {sayHi, sayBye} from './sayhi';
 
 //sayHi('Toi 123 !');
+/*
+class HelloWorld {
+    constructor(name) {
 
-var HelloWorld = function HelloWorld(name) {
-  _classCallCheck(this, HelloWorld);
+        $('#maCase')
+        	.html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
 
-  $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
-};
+    }
+}
 
 new HelloWorld('Lionel');
 // new HelloWorld('Doro');
 
 
-(function ($) {
-  $('#MoviesFilter').on('change', 'input, select', function () {
-    var $form = $(this).closest('form');
-    $form.request();
-  });
+(function($){
+	$('#MoviesFilter').on('change','input, select', function(){
+		var $form = $(this).closest('form');
+		$form.request();
+	})
 })(jQuery);
+*/
 
 /***/ }),
 /* 1 */

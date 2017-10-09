@@ -1,32 +1,22 @@
 <div class="container">
-
-    <form method="POST" action="{{ url('add-actors') }}" accept-charset="UTF8" enctype="multipart/form-data">
+    <form data-request="onSubmit" data-request-files data-request-flash>
 
         <input type="hidden" name="_handler" value="onSave">
-
         {{ form_token() }}
         {{ form_sessionKey() }}
 
-
-        {% flash success %}
-
-        <p>{{ message }}
-        <hr>
-        </p>
-
-        {% endflash %}
-
         <label>Actor name</label>
-        <input type="text" name="name" value="John">
+        <input type="text" name="name" value="aaa">
 
         <label>Actor last name</label>
-        <input type="text" name="lastname" value="Wayne">
+        <input type="text" name="lastname" value="bbb">
 
         <label>Actor image</label>
-        <input type="file" name="actorimage"></input>
+        <input type="file" name="actorimage" accept="image/*" data-request="onImageUpload" data-request-files data-request-flash>
 
+        <div id="imageResult">No image to preview!</div>
+
+        <br><br>
         <button type="submit">Save actor</button>
-
     </form>
-
 </div>
