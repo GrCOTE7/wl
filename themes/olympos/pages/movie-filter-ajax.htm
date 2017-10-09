@@ -8,7 +8,11 @@ is_hidden = 0
     use Grcote7\Movies\Models\Movie;
     use Grcote7\Movies\Models\Genre;
 
-    function onStart() { $this->prepareVars(); }
+    function onStart() {
+        $this->prepareVars();
+        $this->prepareYears();
+    }
+
     function onFilterMovies() { $this->prepareVars(); }
 
     function prepareVars() {
@@ -16,7 +20,10 @@ is_hidden = 0
 
         $this['movies'] = Movie::listFrontEnd($options);
         $this['genres'] = Genre::orderBy('genre_title','asc')->get();
+        $this['sortOptions'] = Movie::$allowedSortingOptions;
+    }
 
+    function prepareYears(){
         $movies = Movie::all();
         $years = [];
 
@@ -58,6 +65,16 @@ is_hidden = 0
                             {% endfor %}
                         </select>
                     </div>
+
+                    <div class="field">
+                        <label><h3>Sorting</h3></label><hr>
+                        <select class="ui fluid dropdown" name="Filter[sort]">
+                            {% for code, option in sortOptions %}
+                                <option value="{{ code }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
                 </div>
             </div>
         {{ form_close() }}
