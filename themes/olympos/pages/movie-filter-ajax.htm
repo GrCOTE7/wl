@@ -11,12 +11,11 @@ is_hidden = 0
     function onStart() { $this->prepareVars(); }
     function onFilterMovies() { $this->prepareVars(); }
 
-
     function prepareVars() {
         $options = post('Filter', []);
 
         $this['movies'] = Movie::listFrontEnd($options);
-        $this['genres'] = Genre::all();
+        $this['genres'] = Genre::orderBy('genre_title','asc')->get();
 
         $movies = Movie::all();
         $years = [];
@@ -32,7 +31,7 @@ is_hidden = 0
 
 ?>
 ==
-<h2 class="ui header" style="margin-top:40px;">Filter Movies</h2>
+<h2 class="ui header" style="margin-top:30px;">Filter Movies</h2>
 
 <div class="ui grid">
     
@@ -54,7 +53,7 @@ is_hidden = 0
                         <label><h3>Year</h3></label><hr>
                         <select class="ui fluid dropdown" name="Filter[year]">
                             <option value="">Select Year</option>
-                            {% for year in years|sort %}
+                            {% for year in years|sort|reverse(true) %}
                                 <option value="{{year}}">{{ year }}</option>
                             {% endfor %}
                         </select>

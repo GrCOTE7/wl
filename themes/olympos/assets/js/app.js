@@ -11,5 +11,13 @@ class HelloWorld {
     }
 }
 
-new HelloWorld('Lionel CÔTE');
+new HelloWorld('Lionel');
 // new HelloWorld('Doro');
+
+
+(function($){
+	$('#MoviesFilter').on('change','input, select', function(){
+		var $form = $(this).closest('form');
+		$form.request();
+	})
+})(jQuery);
