@@ -38,13 +38,15 @@ class Objects extends ComponentBase {
     $teacher = new Person('Lionel','C', 52);
     $student1 = new Person('Doro', 'W', 56);
     $student2 = new Person('Jade', 'W', 13);
+
+    $immo = new Person('Thierry','R', 49);
     
     $groups = ['student1', 'student2', 'teacher'];
 
     $i=0;
     $presentations='';
 
-    $presentations = $student2->greet();
+    $presentations = $immo->greet();
 
   /*
     foreach ($groups as $group) {

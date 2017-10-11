@@ -150,4 +150,5 @@
   'Lovata\\Toolbox\\Components\\Pagination' => 'plugins\\lovata\\toolbox\\components\\Pagination.php',
   'Grcote7\\Tutos\\Components\\Objects' => 'plugins\\grcote7\\tutos\\components\\Objects.php',
   'Grcote7\\Tutos\\Classes\\Person' => 'plugins\\grcote7\\tutos\\classes\\Person.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
 );
