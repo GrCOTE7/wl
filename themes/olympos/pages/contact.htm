@@ -6,22 +6,12 @@ is_hidden = 0
 [Grcote7\Contact\Components\ContactForm contactform]
 
 [siteSearchInclude]
-
-[objects]
 ==
 <h2>Contact Page</h2>
-
-{% component 'objects' %}
-
-<p>JS ===> <span id="maCase" class="ui right floated inverted purple button"></span></p>
-
-
+<p>JS ===> <span id="maCase" class="ui inverted segment"></span></p>
 <p>This is our awesome beautiful <strong>contact</strong> page.</p>
-
-
-<div class="ui piled segment">
-
-	<p class="ui inverted blue segment"> Voici le logo
+<div class="ui piled segment"><p class="ui segment">
+    Voici le logo
     <a href="http://google.com" class="ui mini spaced image">
         <img src={{"assets/images/logo_150x93_c7.png"|theme}}>. GC7
     </a> never si aisé à écrire... Merci <strong>semantic-ui-css</strong> !
@@ -33,10 +23,6 @@ is_hidden = 0
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-
-
-
-
 
 <div class="container">
     {% flash %}
