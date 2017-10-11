@@ -1,5 +1,7 @@
 .phpintel/index
 
+/vendor*
+
 /bootstrap/compiled.php
 #/vendor
 composer.phar
@@ -21,5 +23,5 @@ nbproject
 /node_modules
 .phpintel/
 
-/themes/olympos/assets/compiled
+/themes/olympos/assets/compiled/
 /themes/olympos/assets/dist/
