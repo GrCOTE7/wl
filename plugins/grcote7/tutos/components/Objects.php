@@ -44,7 +44,9 @@ class Objects extends ComponentBase {
     $i=0;
     $presentations='';
 
+    $presentations = $student2->greet();
 
+  /*
     foreach ($groups as $group) {
       $i++;
      
@@ -52,7 +54,7 @@ class Objects extends ComponentBase {
       $presentations.=$this->changeLigne($i, $groups);
       $this->getObjVar($group, $$group);
     }
-
+  */
     return  ($presentations);
   }
 
