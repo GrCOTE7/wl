@@ -8,6 +8,12 @@ use ApplicationException;
 use Cms\Classes\ComponentBase;
 use RainLab\User\Models\User as UserModel;
 
+/**
+ * Password reset workflow
+ *
+ * When a user has forgotten their password, they are able to reset it using
+ * a unique token that, sent to their email address upon request.
+ */
 class ResetPassword extends ComponentBase
 {
     public function componentDetails()
@@ -88,6 +94,10 @@ class ResetPassword extends ComponentBase
         }
 
         list($userId, $code) = $parts;
+
+        if (!$code || !strlen(trim($code))) {
+            throw new ApplicationException(trans('rainlab.user::lang.account.invalid_activation_code'));
+        }
 
         if (!strlen(trim($userId)) || !($user = Auth::findUserById($userId))) {
             throw new ApplicationException(trans('rainlab.user::lang.account.invalid_user'));

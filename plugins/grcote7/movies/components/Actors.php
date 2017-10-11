@@ -82,6 +82,8 @@ class Actors extends ComponentBase {
     //    dump(Config::getenv('MAIL_DRIVER'));
 
 
+// TODOLI Fix 
+    /*
     $message = Swift_Message::newInstance();
 
     // add some message composing here...
@@ -98,6 +100,7 @@ class Actors extends ComponentBase {
       //      dump("Address " . $email . " seems VALID");
     }
     /* and now your transport... */
+    /*
     $transport = Swift_MailTransport::newInstance();
     $mailer    = \Swift_Mailer::newInstance($transport);
     /*

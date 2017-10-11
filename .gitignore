@@ -1,5 +1,7 @@
+.phpintel/index
+
 /bootstrap/compiled.php
-/vendor
+#/vendor
 composer.phar
 .DS_Store
 .idea
@@ -18,7 +20,6 @@ nbproject
 
 /node_modules
 .phpintel/
-.phpintel/index
 
 /themes/olympos/assets/compiled
-/themes/olympos/assets/dist
+/themes/olympos/assets/dist/

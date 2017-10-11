@@ -7,6 +7,15 @@
 </head>
 <body>
 <div class="container">
+
+  <br><br>
+  <div class="ui inverted segment">
+    <button class="ui big inverted red left floated button">Exemple semantic UI</button>
+    <button class="ui big inverted purple right floated button"><?= 'En PHP, 2 + 3 = ' . (3 + 2); ?></button>
+    <br><br><br>
+</div>
+
+
   <h2><?= 'Salut en PHP ! => ' . (3 + 2); ?></h2><br> 
   <button class="small ui button"><a href="/semantic">Retour à la page semantic</a></button>
   <?php

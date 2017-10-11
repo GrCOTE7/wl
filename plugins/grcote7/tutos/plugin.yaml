@@ -1,0 +1,6 @@
+plugin:
+    name: 'grcote7.objets::lang.plugin.name'
+    description: 'grcote7.objets::lang.plugin.description'
+    author: GrCOTE7
+    icon: oc-icon-openid
+    homepage: ''

@@ -1,7 +1,7 @@
 //import {sayHi, sayBye} from './sayhi';
 
 //sayHi('Toi 123 !');
-/*
+
 class HelloWorld {
     constructor(name) {
 
@@ -11,14 +11,15 @@ class HelloWorld {
     }
 }
 
-new HelloWorld('Lionel');
-// new HelloWorld('Doro');
+// new HelloWorld('Lionel');
+new HelloWorld('Doro');
 
 
 (function($){
+	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
 	$('#MoviesFilter').on('change','input, select', function(){
 		var $form = $(this).closest('form');
 		$form.request();
 	})
 })(jQuery);
-*/
+

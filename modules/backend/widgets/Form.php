@@ -699,7 +699,7 @@ class Form extends WidgetBase
         /*
          * Check model if field is required
          */
-        if (!$field->required && $this->model && method_exists($this->model, 'isAttributeRequired')) {
+        if ($field->required === null && $this->model && method_exists($this->model, 'isAttributeRequired')) {
             $field->required = $this->model->isAttributeRequired($field->fieldName);
         }
 
@@ -1018,8 +1018,18 @@ class Form extends WidgetBase
      */
     protected function applyFiltersFromModel()
     {
+        /*
+         * Standard usage
+         */
         if (method_exists($this->model, 'filterFields')) {
             $this->model->filterFields((object) $this->allFields, $this->getContext());
+        }
+
+        /*
+         * Advanced usage
+         */
+        if (method_exists($this->model, 'fireEvent')) {
+            $this->model->fireEvent('model.form.filterFields', [$this]);
         }
     }
 

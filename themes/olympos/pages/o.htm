@@ -1,0 +1,24 @@
+title = "Obj"
+url = "/o"
+layout = "default"
+is_hidden = 0
+
+[objects]
+==
+<?php
+
+function onStart(){
+	// Debugbar::addMessage($this->page->title, 'Début');
+}
+
+function onEnd(){
+	$this->page->title = 'Class Person';
+	// Debugbar::addMessage($this->page->title, 'Fin');
+}
+
+?>
+==
+<div class="container">
+    <!-- <h3>Mon plugin</h3> -->
+    {% component 'objects' %}
+</div>
