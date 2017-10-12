@@ -178,3 +178,13 @@ strong {
 .left {
   text-align: left;
 }
+
+.gc7List{
+  li {
+    list-style-type: disc;
+  }
+  .ssList li{
+      list-style-type: circle;
+  }
+  color:black;
+}

@@ -16,6 +16,18 @@ new HelloWorld('Doro');
 
 
 (function($){
+
+
+  $('.installation .menu .item')
+    .tab({
+      context: '.installation'
+    })
+  ;
+
+
+
+	$('.menu .item').tab();
+
 	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
 	$('#MoviesFilter').on('change','input, select', function(){
 		var $form = $(this).closest('form');
