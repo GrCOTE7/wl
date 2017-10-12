@@ -1,6 +1,6 @@
 .phpintel/index
 
-/vendor/
+/vendor*
 
 /bootstrap/compiled.php
 #/vendor
