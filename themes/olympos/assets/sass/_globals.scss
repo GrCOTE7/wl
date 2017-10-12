@@ -163,13 +163,13 @@ strong {
   font-weight: bold;
 }
 
-.50pc{
+.pc {
   width: 50%;
 }
 
 .text-center {
-  p{
-    color:blue;
+  p {
+    color: blue;
     text-align: center;
     font-weight: bold;
   }
@@ -179,12 +179,20 @@ strong {
   text-align: left;
 }
 
-.gc7List{
+.gc7List {
   li {
     list-style-type: disc;
   }
-  .ssList li{
-      list-style-type: circle;
+  .ssList li {
+    list-style-type: circle;
   }
-  color:black;
+}
+
+.linkColor {
+  color: #4183c4;
+}
+
+//.ui.list .list, ol.ui.list ol, ul.ui.list ul {
+.ui.ordered.list.pluspretrubrique {
+  padding: 0;
 }

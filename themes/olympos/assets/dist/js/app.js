@@ -77,9 +77,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 //sayHi('Toi 123 !');
 
 var HelloWorld = function HelloWorld(name) {
-  _classCallCheck(this, HelloWorld);
+	_classCallCheck(this, HelloWorld);
 
-  $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
+	$('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>' + name + '</strong> !');
 };
 
 // new HelloWorld('Lionel');
@@ -89,17 +89,15 @@ new HelloWorld('Doro');
 
 (function ($) {
 
-  $('.installation .menu .item').tab({
-    context: '.installation'
-  });
+	$('.menu .etape').tab();
 
-  $('.menu .item').tab();
+	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
+	$('#MoviesFilter').on('change', 'input, select', function () {
+		var $form = $(this).closest('form');
+		$form.request();
+	});
 
-  // $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
-  $('#MoviesFilter').on('change', 'input, select', function () {
-    var $form = $(this).closest('form');
-    $form.request();
-  });
+	$('#tab2').click();
 })(jQuery);
 
 /***/ }),

@@ -17,21 +17,19 @@ new HelloWorld('Doro');
 
 (function($){
 
-
-  $('.installation .menu .item')
-    .tab({
-      context: '.installation'
-    })
-  ;
+	$('.menu .etape').tab();
+	
 
 
 
-	$('.menu .item').tab();
 
 	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
 	$('#MoviesFilter').on('change','input, select', function(){
 		var $form = $(this).closest('form');
 		$form.request();
 	})
+
+	$('#tab2').click();
+
 })(jQuery);
 
