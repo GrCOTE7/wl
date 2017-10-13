@@ -18,14 +18,15 @@ new HelloWorld('Doro');
 (function($){
 
 	$('.menu .etape').tab();
-	// $('#tab2').click();
-	
 
-	$('#context1 .menu .item')
+
+	$('#procedure .menu .item')
   .tab({
-    context: $('#context1')
-  })
-;
+    context: $('#procedure')
+  });
+
+	// $('#btn1').click();
+	$('#tab1').click();
 
 
 	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');

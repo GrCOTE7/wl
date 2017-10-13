@@ -90,12 +90,13 @@ new HelloWorld('Doro');
 (function ($) {
 
 	$('.menu .etape').tab();
-	// $('#tab2').click();
 
-
-	$('#context1 .menu .item').tab({
-		context: $('#context1')
+	$('#procedure .menu .item').tab({
+		context: $('#procedure')
 	});
+
+	// $('#btn1').click();
+	$('#tab1').click();
 
 	// $('#maCase').html('<b>Salut, le Monde !</b>... Et <strong>Lionel C.</strong> !');
 	$('#MoviesFilter').on('change', 'input, select', function () {
