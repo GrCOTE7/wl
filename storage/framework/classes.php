@@ -150,4 +150,8 @@
   'Lovata\\Toolbox\\Components\\Pagination' => 'plugins\\lovata\\toolbox\\components\\Pagination.php',
   'Grcote7\\Tutos\\Components\\Objects' => 'plugins\\grcote7\\tutos\\components\\Objects.php',
   'Grcote7\\Tutos\\Classes\\Person' => 'plugins\\grcote7\\tutos\\classes\\Person.php',
+  'RainLab\\User\\Models\\UserGroup' => 'plugins\\rainlab\\user\\models\\UserGroup.php',
+  'RainLab\\Forum\\Models\\Member' => 'plugins\\rainlab\\forum\\models\\Member.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
+  'backend\\Controllers\\users' => 'modules\\backend\\controllers\\users.php',
 );
