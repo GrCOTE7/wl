@@ -96,7 +96,7 @@ return [
   |
   */
 
-  'password' => env('MAIL_PASSWORD', 'AdelC014529'),
+  'password' => env('MAIL_PASSWORD', 'VotrePass),
 
   /*
   |--------------------------------------------------------------------------
@@ -109,10 +109,10 @@ return [
   |
   */
 
-  // 'sendmail' => '/usr/sbin/sendmail -bs',
-  'sendmail' => 'C:/laragon/bin/sendmail/sendmail.exe -t -i',
-  // 'sendmail' => 'C:/sendmail/sendmail.exe',
-  //  'sendmail' => 'C:/usr/lib/sendmail.exe -t -i',
+  // 'sendmail' => ' / usr / sbin / sendmail - bs',
+  'sendmail' => 'C:/laragon / bin / sendmail / sendmail . exe - t - i',
+  // 'sendmail' => 'C:/sendmail / sendmail . exe',
+  //  'sendmail' => 'C:/usr / lib / sendmail . exe - t - i',
 
   /*
   |--------------------------------------------------------------------------
@@ -120,8 +120,7 @@ return [
   |--------------------------------------------------------------------------
   |
   | When this option is enabled, e-mail will not actually be sent over the
-  | web and will instead be written to your application's logs files so
-  | you may inspect the message. This is great for local development.
+  | web and will instead be written to your application's logs files so | you may inspect the message . This is great for local development .
   |
   */
 
