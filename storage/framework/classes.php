@@ -154,4 +154,10 @@
   'RainLab\\Forum\\Models\\Member' => 'plugins\\rainlab\\forum\\models\\Member.php',
   'RainLab\\User\\Models\\MailBlocker' => 'plugins\\rainlab\\user\\models\\MailBlocker.php',
   'backend\\Controllers\\users' => 'modules\\backend\\controllers\\users.php',
+  'cms\\Controllers\\themes' => 'modules\\cms\\controllers\\themes.php',
+  'rainlab\\pages\\Controllers\\index' => 'plugins\\rainlab\\pages\\controllers\\index.php',
+  'RainLab\\Pages\\Widgets\\PageList' => 'plugins\\rainlab\\pages\\widgets\\PageList.php',
+  'RainLab\\Pages\\Widgets\\MenuList' => 'plugins\\rainlab\\pages\\widgets\\MenuList.php',
+  'RainLab\\Pages\\Widgets\\SnippetList' => 'plugins\\rainlab\\pages\\widgets\\SnippetList.php',
+  'RainLab\\Pages\\Classes\\Content' => 'plugins\\rainlab\\pages\\classes\\Content.php',
 );
