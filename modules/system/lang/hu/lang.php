@@ -264,8 +264,9 @@ return [
         'core_current_build' => 'Verzió',
         'core_build' => 'Új verzió: :build',
         'core_build_help' => 'Elérhető a legújabb hivatalos kiadás.',
-        'core_downloading' => 'Rendszer frissítés letöltése...',
-        'core_extracting' => 'Rendszer frissítés kicsomagolása...',
+        'core_downloading' => 'Rendszer letöltése...',
+        'core_extracting' => 'Rendszer kicsomagolása...',
+        'core_set_build' => 'Rendszer beállítása...',
         'plugins' => 'Bővítmények',
         'themes' => 'Témák',
         'disabled' => 'Letiltva',
@@ -277,8 +278,8 @@ return [
         'theme_downloading' => 'Téma letöltése: :name',
         'theme_extracting' => 'Téma kicsomagolása: :name',
         'update_label' => 'Honlap frissítése',
-        'update_completing' => 'Frissítési folyamat befejezése',
-        'update_loading' => 'Elérhető frissítések betöltése...',
+        'update_completing' => 'Folyamat befejezése',
+        'update_loading' => 'Frissítések betöltése...',
         'update_success' => 'A frissítés sikeresen megtörtént.',
         'update_failed_label' => 'A frissítés nem sikerült.',
         'force_label' => 'Frissítés kényszerítése',
@@ -385,5 +386,9 @@ return [
         'log_requests_comment' => 'Rossz vagy átirányított kérelmek eltárolása.',
         'log_theme' => 'Téma változtatások naplózása',
         'log_theme_comment' => 'A fájlokban történt változtatások eltárolása.'
-    ]
+    ],
+    'media' => [
+        'invalid_path' => "Érvénytelen elérési útvonal: ':path'",
+        'folder_size_items' => 'fájl',
+    ],
 ];

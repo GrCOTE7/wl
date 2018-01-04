@@ -1,0 +1,25 @@
+name: 'Bulma Boilerplate Theme'
+description: 'An OctoberCMS Theme for developpers, uses Bulma for CSS - Vue for Javascript - Webpack to build styles, optimize images, compile javascript and VueJs.'
+author: 'Kiko Seijo'
+code: 'ksoft-bulma'
+homepage: 'http://sunnyface.com'
+colours:
+  brown: '#49412c'
+  cream: '#c7ad88'
+  grey: '#677077'
+  navy: '#16174f'
+  orange: '#e05038'
+  pink: '#ffb3b3'
+  purple: '#300032'
+  teal: '#6ed3cf'
+  wine: '#5e0231'
+  yellow: '#cdd422'
+
+elements: ['responsive', 'hero', 'grid','box','buttons','tiles','timeline', 'card', 'typography', 'message', 'notification', 'table', 'form']
+buefyEl: ['fields', 'notifications', 'tabs', 'icon', 'menu', 'modal', 'pagination']
+pagesExamples: ['product-detail', 'register', 'blog', 'blog-2']
+#require:
+#    - Acme.User
+#    - Acme.Blog
+
+form: theme_fields.yaml

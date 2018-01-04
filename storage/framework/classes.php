@@ -160,4 +160,5 @@
   'RainLab\\Pages\\Widgets\\MenuList' => 'plugins\\rainlab\\pages\\widgets\\MenuList.php',
   'RainLab\\Pages\\Widgets\\SnippetList' => 'plugins\\rainlab\\pages\\widgets\\SnippetList.php',
   'RainLab\\Pages\\Classes\\Content' => 'plugins\\rainlab\\pages\\classes\\Content.php',
+  'CMS\\Models\\ThemeData' => 'modules\\cms\\models\\ThemeData.php',
 );
