@@ -1,8 +1,9 @@
 /.phpintel/index
 
 /storage/framework/
-/vendor/
+/storage/app/uploads/public/*
 
+/vendor/
 /bootstrap/compiled.php
 #/vendor
 composer.phar
