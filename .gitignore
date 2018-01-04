@@ -1,5 +1,6 @@
 /.phpintel/index
 
+/storage/framework/
 /vendor/
 
 /bootstrap/compiled.php
