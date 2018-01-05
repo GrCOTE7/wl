@@ -161,4 +161,11 @@
   'RainLab\\Pages\\Widgets\\SnippetList' => 'plugins\\rainlab\\pages\\widgets\\SnippetList.php',
   'RainLab\\Pages\\Classes\\Content' => 'plugins\\rainlab\\pages\\classes\\Content.php',
   'CMS\\Models\\ThemeData' => 'modules\\cms\\models\\ThemeData.php',
+  'October\\Demo\\Components\\Todo' => 'plugins\\october\\demo\\components\\Todo.php',
+  'backend\\Controllers\\media' => 'modules\\backend\\controllers\\media.php',
+  'rainlab\\blog\\Controllers\\posts' => 'plugins\\rainlab\\blog\\controllers\\posts.php',
+  'RainLab\\Blog\\Models\\PostImport' => 'plugins\\rainlab\\blog\\models\\PostImport.php',
+  'RainLab\\Blog\\Models\\PostExport' => 'plugins\\rainlab\\blog\\models\\PostExport.php',
+  'RainLab\\Blog\\Models\\Category' => 'plugins\\rainlab\\blog\\models\\Category.php',
+  'RainLab\\Blog\\FormWidgets\\BlogMarkdown' => 'plugins\\rainlab\\blog\\formwidgets\\BlogMarkdown.php',
 );
