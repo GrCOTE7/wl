@@ -1,6 +1,6 @@
 /.phpintel/index
 
-/storage/framework/
+/storage/framework/*
 /storage/app/uploads/public/*
 
 /vendor/
