@@ -117,6 +117,15 @@ return [
   */
 
 
+  'stream'     => [
+    'ssl' => [
+      'allow_self_signed' => TRUE,
+      'verify_peer'       => FALSE,
+      'verify_peer_name'  => FALSE,
+    ],
+  ],
+
+
   /*
   |--------------------------------------------------------------------------
   | Mail "Pretend"
