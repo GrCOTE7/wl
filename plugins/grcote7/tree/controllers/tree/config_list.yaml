@@ -1,0 +1,11 @@
+title: Tree
+modelClass: Grcote7\Tree\Models\Tree
+list: $/grcote7/tree/models/tree/columns.yaml
+recordUrl: 'grcote7/tree/tree/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

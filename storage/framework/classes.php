@@ -183,4 +183,11 @@
   'RainLab\\Builder\\Classes\\BehaviorDesignTimeProviderBase' => 'plugins\\rainlab\\builder\\classes\\BehaviorDesignTimeProviderBase.php',
   'RainLab\\Builder\\Widgets\\DefaultBehaviorDesignTimeProvider' => 'plugins\\rainlab\\builder\\widgets\\DefaultBehaviorDesignTimeProvider.php',
   'RainLab\\Builder\\FormWidgets\\MenuEditor' => 'plugins\\rainlab\\builder\\formwidgets\\MenuEditor.php',
+  'grcote7\\tree\\Plugin' => 'plugins\\grcote7\\tree\\Plugin.php',
+  'RainLab\\Builder\\Classes\\DatabaseTableSchemaCreator' => 'plugins\\rainlab\\builder\\classes\\DatabaseTableSchemaCreator.php',
+  'RainLab\\Builder\\Classes\\TableMigrationCodeGenerator' => 'plugins\\rainlab\\builder\\classes\\TableMigrationCodeGenerator.php',
+  'RainLab\\Builder\\Classes\\MigrationModel' => 'plugins\\rainlab\\builder\\classes\\MigrationModel.php',
+  'RainLab\\Builder\\Classes\\ControllerGenerator' => 'plugins\\rainlab\\builder\\classes\\ControllerGenerator.php',
+  'grcote7\\tree\\Controllers\\tree' => 'plugins\\grcote7\\tree\\controllers\\tree.php',
+  'Grcote7\\Tree\\Models\\Tree' => 'plugins\\grcote7\\tree\\models\\Tree.php',
 );

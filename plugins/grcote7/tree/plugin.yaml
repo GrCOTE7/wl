@@ -1,0 +1,20 @@
+plugin:
+    name: 'grcote7.tree::lang.plugin.name'
+    description: 'grcote7.tree::lang.plugin.description'
+    author: GrCOTE7
+    icon: oc-icon-diamond
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Tree
+        url: grcote7/tree/tree
+        icon: icon-share-alt-square
+        sideMenu:
+            side-menu-item:
+                label: Group
+                url: /
+                icon: icon-sitemap
+            side-menu-item2:
+                label: Users
+                url: /
+                icon: icon-user

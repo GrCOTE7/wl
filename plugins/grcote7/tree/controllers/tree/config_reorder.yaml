@@ -1,0 +1,4 @@
+title: Tree
+modelClass: Grcote7\Tree\Models\Tree
+toolbar:
+    buttons: reorder_toolbar

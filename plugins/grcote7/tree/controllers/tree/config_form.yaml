@@ -1,0 +1,10 @@
+name: Tree
+form: $/grcote7/tree/models/tree/fields.yaml
+modelClass: Grcote7\Tree\Models\Tree
+defaultRedirect: grcote7/tree/tree
+create:
+    redirect: 'grcote7/tree/tree/update/:id'
+    redirectClose: grcote7/tree/tree
+update:
+    redirect: grcote7/tree/tree
+    redirectClose: grcote7/tree/tree

@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: Id
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    parrain_id:
+        label: Parrain
+        type: text
+        searchable: true
+        sortable: true
